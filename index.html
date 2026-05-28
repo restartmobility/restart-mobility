@@ -1,65 +1,247 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReStart Mobility</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ReStart Mobility | Give hope, mobility and a better life</title>
+<meta name="description" content="ReStart Mobility supports people with physical disabilities by collecting and donating electric wheelchairs, manual hoists, passenger lifts and mobility equipment between the UK and Romania." />
+<link rel="icon" href="logo.png" />
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#062b5f}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:white;position:sticky;top:0}
-.logo{display:flex;align-items:center;gap:15px}
-.logo img{width:90px;border-radius:18px}
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh;background:white}
-.left{padding:60px}
-h1{font-size:64px;line-height:1.05}
-.green{color:#18a34a}
-.btns{display:flex;gap:15px;margin-top:30px}
-.btn{padding:16px 28px;border-radius:40px;font-weight:bold;text-decoration:none}
-.greenbtn{background:#18a34a;color:white}
-.whitebtn{border:2px solid #0a3a7a;color:#0a3a7a}
-.right{
-background:url('hero.jpg') center/cover no-repeat;
-min-height:700px;
+:root{
+  --blue:#062b5f;
+  --blue2:#0a4f9e;
+  --green:#159b50;
+  --soft:#f4f9ff;
+  --text:#0c2e56;
+  --muted:#607084;
+  --shadow:0 18px 45px rgba(6,43,95,.14);
 }
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px}
-.card{background:white;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
-@media(max-width:900px){
-.hero{grid-template-columns:1fr}
-h1{font-size:42px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:white}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:20;border-bottom:1px solid #e7eef8}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:18px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:105px;height:82px;object-fit:contain;background:white;border-radius:24px;padding:5px;box-shadow:var(--shadow)}
+.brand strong{font-size:1.65rem;color:var(--blue);display:block;line-height:1}
+.brand span{font-size:.9rem;color:var(--muted)}
+.links{display:flex;gap:24px;font-weight:800;color:var(--blue);font-size:.95rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 25px;font-weight:900;border:0;box-shadow:var(--shadow)}
+.btn-green{background:var(--green);color:white}
+.btn-white{background:white;color:var(--blue);border:1px solid #b9cce5;box-shadow:none}
+.hero{
+  background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.86) 48%,rgba(255,255,255,.05) 72%),
+             url('hero.jpg') right center/contain no-repeat;
+  min-height:720px;
+  display:flex;
+  align-items:center;
+}
+.hero-content{max-width:610px;padding:50px 0}
+.flags{display:flex;align-items:center;gap:10px;font-weight:900;margin-bottom:26px;color:var(--blue)}
+.flag{font-size:2rem;background:white;border-radius:12px;padding:5px 9px;box-shadow:0 8px 22px rgba(6,43,95,.12)}
+h1{font-size:clamp(2.8rem,6vw,5.3rem);line-height:1.02;margin:0 0 22px;letter-spacing:-2px;color:var(--blue)}
+.green{color:var(--green)}
+p{font-size:1.08rem;line-height:1.7;color:#14375d}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+.stats{margin-top:-48px;position:relative;z-index:5}
+.stats-box{display:grid;grid-template-columns:repeat(4,1fr);background:white;border-radius:26px;box-shadow:var(--shadow);overflow:hidden}
+.stat{text-align:center;padding:24px;border-right:1px solid #e9eef7}
+.stat:last-child{border-right:0}
+.stat .ico{font-size:2.1rem}
+.stat strong{display:block;font-size:2rem;color:var(--blue)}
+.stat span{color:var(--muted);font-size:.95rem}
+section{padding:76px 0}
+.section-title{text-align:center;margin-bottom:34px}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;color:var(--blue);margin:0 0 10px}
+.line{width:50px;height:4px;background:var(--green);border-radius:10px;margin:12px auto}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.card{background:white;border:1px solid #e7eef8;border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(6,43,95,.08)}
+.equipment{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;min-height:250px}
+.equipment img{width:100%;height:210px;object-fit:cover;border-radius:18px}
+.equipment h3,.step h3,.card h3{color:var(--blue);margin:0 0 10px}
+.equipment a{color:var(--blue2);font-weight:900}
+#help{background:var(--soft)}
+.step{text-align:center}
+.num{background:var(--green);color:white;width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;font-weight:900}
+.stepicon{font-size:2.3rem;background:#eaf4ff;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin:13px auto}
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.dark{background:var(--blue);color:white}
+.dark h2,.dark h3,.dark p,.dark li{color:white}
+ul{padding-left:20px;line-height:1.9}
+.banner{
+  background:linear-gradient(90deg,#062b5f 0%,#062b5f 45%,rgba(6,43,95,.78) 62%,rgba(6,43,95,.16) 100%),
+             url('sunset.jpg') right center/cover no-repeat;
+  border-radius:28px;
+  padding:42px;
+  color:white;
+  box-shadow:var(--shadow);
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:20px;
+  align-items:center;
+}
+.banner h2,.banner p{color:white}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:#f1f7ff;border-radius:24px;padding:22px;margin-top:24px}
+.trust div{display:flex;gap:12px;align-items:flex-start}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+footer{background:#06182f;color:white;padding:38px 0}
+footer .container{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{width:80px;background:white;border-radius:18px;padding:5px}
+footer p, footer span, footer strong{color:white}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#25d366;color:white;padding:15px 20px;border-radius:999px;font-weight:900;box-shadow:var(--shadow);z-index:50}
+@media(max-width:920px){
+  .links{display:none}
+  .brand img{width:72px;height:62px}
+  .brand strong{font-size:1.35rem}
+  .hero{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.88) 48%,rgba(255,255,255,.2) 100%),url('hero.jpg') center bottom/cover no-repeat;min-height:760px;align-items:flex-start}
+  .hero-content{padding:34px 0 390px}
+  .stats-box,.grid3,.grid5,.mission-grid,.trust,.contact-box,.banner{grid-template-columns:1fr}
+  .equipment{grid-template-columns:1fr}
+  h1{font-size:2.75rem}
 }
 </style>
 </head>
 <body>
 <header>
-<div class="logo">
-<img src="logo.png">
-<div>
-<h2>ReStart Mobility</h2>
-<p>Mobility. Independence. Hope.</p>
-</div>
-</div>
-<a class="btn greenbtn">Donate</a>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="ReStart Mobility logo">
+      <div><strong>ReStart Mobility</strong><span>Mobility. Independence. Hope.</span></div>
+    </a>
+    <nav class="links">
+      <a href="#mission">Mission</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#help">How we help</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility">♡ Donate</a>
+  </div>
 </header>
 
-<section class="hero">
-<div class="left">
-<p>🇬🇧 🇷🇴 UK support for people with physical disabilities in Romania</p>
-<h1>Give <span class="green">hope, mobility</span> and a <span class="green">better life</span> to people in need.</h1>
-<p>ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.</p>
-<div class="btns">
-<a class="btn greenbtn">Donate equipment</a>
-<a class="btn whitebtn">Request help</a>
-</div>
-</div>
-<div class="right"></div>
-</section>
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="flags"><span class="flag">🇬🇧</span><span class="flag">🇷🇴</span><span>UK support for people with physical disabilities in Romania</span></div>
+        <h1>Give <span class="green">hope, mobility</span> and a <span class="green">better life</span> to people in need.</h1>
+        <p>ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.</p>
+        <div class="hero-actions">
+          <a class="btn btn-green" href="#equipment">♡ Donate equipment →</a>
+          <a class="btn btn-white" href="#contact">♿ Request help</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="stats">
-<div class="card"><h2>50+</h2><p>chairs target</p></div>
-<div class="card"><h2>2</h2><p>countries</p></div>
-<div class="card"><h2>100%</h2><p>impact led</p></div>
-<div class="card"><h2>∞</h2><p>lives changed</p></div>
-</div>
+  <div class="container stats">
+    <div class="stats-box">
+      <div class="stat"><div class="ico">♿</div><strong>50+</strong><span>Chairs target</span></div>
+      <div class="stat"><div class="ico">🌍</div><strong>2</strong><span>UK & Romania</span></div>
+      <div class="stat"><div class="ico">👥</div><strong>100%</strong><span>Impact led</span></div>
+      <div class="stat"><div class="ico">💚</div><strong>Hope</strong><span>Lives changed</span></div>
+    </div>
+  </div>
+
+  <section id="equipment">
+    <div class="container">
+      <div class="section-title"><h2>Equipment we provide</h2><div class="line"></div></div>
+      <div class="grid3">
+        <div class="card equipment">
+          <div><h3>Electric Wheelchairs</h3><p>We are looking for good quality electric wheelchairs, batteries, chargers and spare parts.</p><a href="mailto:contact@restartmobility.org?subject=Electric wheelchair donation">Learn more →</a></div>
+          <img src="electric-wheelchair.jpg" alt="Electric wheelchair">
+        </div>
+        <div class="card equipment">
+          <div><h3>Manual Hoists</h3><p>Safe and reliable manual hoists to support transfers and daily care.</p><a href="mailto:contact@restartmobility.org?subject=Manual hoist donation">Learn more →</a></div>
+          <img src="manual-hoist.jpg" alt="Manual hoist">
+        </div>
+        <div class="card equipment">
+          <div><h3>Passenger Lifts</h3><p>Lifts and transfer equipment for people with disabilities to access homes and safe spaces.</p><a href="mailto:contact@restartmobility.org?subject=Passenger lift donation">Learn more →</a></div>
+          <img src="passenger-lift.jpg" alt="Passenger lift">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="help">
+    <div class="container">
+      <div class="section-title"><h2>How we help</h2><div class="line"></div></div>
+      <div class="grid5">
+        <div class="card step"><span class="num">1</span><div class="stepicon">🎁</div><h3>We collect</h3><p>We collect pre-loved equipment from donors across the UK.</p></div>
+        <div class="card step"><span class="num">2</span><div class="stepicon">🔧</div><h3>We refurbish</h3><p>We clean, check and prepare every item carefully.</p></div>
+        <div class="card step"><span class="num">3</span><div class="stepicon">🚚</div><h3>We transport</h3><p>We pack and transport equipment to Romania.</p></div>
+        <div class="card step"><span class="num">4</span><div class="stepicon">🤲</div><h3>We deliver</h3><p>We give equipment to people who truly need it.</p></div>
+        <div class="card step"><span class="num">5</span><div class="stepicon">🌟</div><h3>We change lives</h3><p>We restore mobility, independence and dignity.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="container mission-grid">
+      <div class="card dark">
+        <h2>Our mission</h2>
+        <p>We create a practical bridge between unused mobility equipment in the UK and people with urgent needs in Romania.</p>
+        <ul>
+          <li>Electric wheelchairs</li>
+          <li>Manual hoists</li>
+          <li>Passenger lifts</li>
+          <li>Other mobility aids</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Partner with us</h2>
+        <p>We welcome support from care homes, hospitals, charities, transport companies, councils and sponsors.</p>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Partnership with ReStart Mobility">Become a partner</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="banner">
+        <div>
+          <h2>Together, we can make a difference</h2>
+          <p>Your donation can give someone the chance to live with dignity, independence and hope.</p>
+        </div>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility">♡ Donate now</a>
+      </div>
+      <div class="trust">
+        <div><strong>🛡️</strong><span><b>100% Donated</b><br>Everything goes to people in need</span></div>
+        <div><strong>👥</strong><span><b>Run by volunteers</b><br>Passionate people making a difference</span></div>
+        <div><strong>✅</strong><span><b>Transparent & honest</b><br>Open about what we do</span></div>
+        <div><strong>🔒</strong><span><b>Secure donations</b><br>Safe, secure and trusted</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-box">
+      <div>
+        <h2>Contact ReStart Mobility</h2>
+        <p><b>Email:</b> <a href="mailto:contact@restartmobility.org">contact@restartmobility.org</a></p>
+        <p><b>WhatsApp:</b> <a href="https://wa.me/447828052009">+44 7828 052009</a></p>
+        <p><b>Location:</b> United Kingdom & Romania</p>
+      </div>
+      <div class="card">
+        <h3>We are currently looking for</h3>
+        <ul>
+          <li>Electric wheelchairs</li>
+          <li>Manual hoists</li>
+          <li>Passenger lifts for disabled people</li>
+          <li>Other mobility and care equipment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="brand"><img src="logo.png" alt="ReStart Mobility logo"><div><strong>ReStart Mobility</strong><span>Give hope, mobility and a better life to people in need.</span></div></div>
+    <p>© 2026 ReStart Mobility</p>
+  </div>
+</footer>
+<a class="whatsapp" href="https://wa.me/447828052009">WhatsApp</a>
 </body>
 </html>
