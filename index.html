@@ -1,415 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReStart Mobility</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>ReStart Mobility | Mobility. Independence. Hope.</title>
+<meta name="description" content="ReStart Mobility supports people with physical disabilities by providing mobility equipment, wheelchairs, hoists and access solutions between the UK and Romania." />
+<link rel="icon" href="logo.png" />
 
 <style>
 :root{
---blue:#062b5f;
---green:#159b50;
---light:#f5fbff;
---border:#e6eef8;
---shadow:0 18px 40px rgba(6,43,95,.12);
+  --blue:#062b5f;
+  --green:#159b50;
+  --light:#f5fbff;
+  --text:#24425f;
+  --muted:#64748b;
+  --border:#e6eef8;
+  --shadow:0 18px 40px rgba(6,43,95,.12);
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#fff;
-color:var(--blue);
-overflow-x:hidden;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:var(--blue);
+  overflow-x:hidden;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
 }
 
 .container{
-width:min(1180px,92%);
-margin:auto;
-}
-
-header{
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(255,255,255,.96);
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--border);
-}
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 0;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:14px;
-}
-
-.brand img{
-width:90px;
-height:auto;
-}
-
-.brand strong{
-display:block;
-font-size:1.8rem;
-}
-
-.brand span{
-font-size:.95rem;
-font-weight:700;
-}
-
-.nav-links{
-display:flex;
-gap:24px;
-font-weight:700;
+  width:min(1180px,92%);
+  margin:auto;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:14px 24px;
-border-radius:999px;
-font-weight:800;
-cursor:pointer;
-transition:.3s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 24px;
+  border-radius:999px;
+  font-weight:900;
+  border:1px solid transparent;
+  cursor:pointer;
+  font-size:1rem;
 }
 
 .btn-green{
-background:var(--green);
-color:#fff;
-box-shadow:0 12px 28px rgba(21,155,80,.25);
+  background:var(--green);
+  color:#fff;
+  box-shadow:0 12px 28px rgba(21,155,80,.25);
 }
 
 .btn-white{
-background:#fff;
-border:1px solid #c8d7eb;
-}
-
-.hero{
-padding:60px 0;
-background:linear-gradient(180deg,#fff 0%,#f7fbff 100%);
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.flags{
-display:flex;
-gap:10px;
-margin-bottom:20px;
-font-size:1.1rem;
-font-weight:700;
-}
-
-.flag{
-background:#fff;
-padding:8px 12px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(6,43,95,.1);
-}
-
-h1{
-font-size:clamp(3rem,5vw,5rem);
-line-height:1.02;
-margin-bottom:20px;
-letter-spacing:-2px;
+  background:#fff;
+  color:var(--blue);
+  border-color:#c9d8ed;
 }
 
 .green{
-color:var(--green);
+  color:var(--green);
 }
 
-.hero p{
-font-size:1.08rem;
-line-height:1.7;
-margin-bottom:28px;
-color:#24425f;
-}
-
-.hero-actions{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-}
-
-.hero-image{
-border-radius:32px;
-overflow:hidden;
-box-shadow:var(--shadow);
-background:#fff;
-border:1px solid var(--border);
-}
-
-.hero-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-.stats{
-margin-top:-20px;
-}
-
-.stats-box{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-background:#fff;
-border-radius:28px;
-overflow:hidden;
-box-shadow:var(--shadow);
-border:1px solid var(--border);
-}
-
-.stat{
-padding:26px;
-text-align:center;
-border-right:1px solid var(--border);
-}
-
-.stat:last-child{
-border-right:none;
-}
-
-.stat strong{
-display:block;
-font-size:2rem;
-margin-bottom:8px;
-}
-
-.stat span{
-color:#61748a;
-}
-
-section{
-padding:70px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:34px;
-}
-
-.section-title h2{
-font-size:2.3rem;
-}
-
-.line{
-width:55px;
-height:4px;
-background:var(--green);
-margin:12px auto 0;
-border-radius:999px;
-}
-
-.grid{
-display:grid;
-gap:24px;
-}
-
-.grid-3{
-grid-template-columns:repeat(3,1fr);
-}
-
-.card{
-background:#fff;
-border-radius:28px;
-overflow:hidden;
-box-shadow:0 10px 28px rgba(6,43,95,.08);
-border:1px solid var(--border);
-}
-
-.card img{
-width:100%;
-height:auto;
-object-fit:contain;
-background:#fff;
-padding:20px;
-display:block;
-}
-}
-
-.card-content{
-padding:26px;
-}
-
-.card h3{
-font-size:1.5rem;
-margin-bottom:14px;
-}
-
-.card p{
-line-height:1.7;
-color:#284563;
-margin-bottom:18px;
-}
-
-.learn{
-font-weight:800;
-color:#0d58b0;
-}
-
-.banner{
-background:
-linear-gradient(90deg,#062b5f 0%,rgba(6,43,95,.86) 60%,rgba(6,43,95,.5) 100%),
-url('hero.jpg') center/cover no-repeat;
-border-radius:30px;
-padding:42px;
-display:grid;
-grid-template-columns:1fr auto;
-gap:24px;
-align-items:center;
-color:#fff;
-box-shadow:var(--shadow);
-}
-
-.banner h2{
-font-size:2rem;
-margin-bottom:14px;
-}
-
-.banner p{
-line-height:1.7;
-max-width:650px;
-}
-
-.contact{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:24px;
-}
-
-.contact-box{
-background:#fff;
-padding:30px;
-border-radius:28px;
-border:1px solid var(--border);
-box-shadow:0 10px 28px rgba(6,43,95,.08);
-}
-
-footer{
-background:#06182f;
-color:#fff;
-padding:36px 0;
-margin-top:30px;
-}
-
-footer .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.whatsapp{
-position:fixed;
-right:12px;
-bottom:12px;
-background:#25d366;
-color:#fff;
-padding:13px 18px;
-border-radius:999px;
-font-weight:800;
-box-shadow:0 12px 30px rgba(37,211,102,.28);
-z-index:99;
-}
-
-@media(max-width:900px){
-
-.hero-grid,
-.contact,
-.grid-3,
-.stats-box{
-grid-template-columns:1fr;
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
 }
 
 .nav{
-justify-content:center;
-text-align:center;
+  display:grid;
+  grid-template-columns:auto 1fr auto auto;
+  align-items:center;
+  gap:22px;
+  padding:14px 0;
 }
 
-.nav-links{
-display:none;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
 }
 
+.brand img{
+  width:92px;
+  height:68px;
+  object-fit:contain;
+}
+
+.brand strong{
+  display:block;
+  font-size:1.7rem;
+  line-height:1;
+}
+
+.brand span{
+  font-size:.92rem;
+  font-weight:700;
+}
+
+.links{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  font-weight:900;
+  font-size:.94rem;
+}
+
+.lang-btn{
+  background:#fff;
+  border:1px solid #c9d8ed;
+  color:var(--blue);
+  border-radius:999px;
+  padding:13px 22px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(6,43,95,.08);
+}
+
+.mobile-actions{
+  display:none;
+}
+
+/* HERO */
 .hero{
-padding:40px 0;
-text-align:center;
+  padding:58px 0 64px;
+  background:linear-gradient(180deg,#fff 0%,#f7fbff 100%);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:42px;
+  align-items:center;
 }
 
 .flags{
-justify-content:center;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+  font-weight:900;
 }
 
-.hero-actions{
-justify-content:center;
-}
-
-.hero-image{
-order:-1;
-}
-
-.card img{
-height:auto;
-max-height:none;
-object-fit:contain;
-padding:16px;
-background:#fff;
-}
-}
-
-.banner{
-grid-template-columns:1fr;
-text-align:center;
-padding:30px 24px;
-}
-
-.stats{
-margin-top:20px;
-}
-
-.stat{
-border-right:none;
-border-bottom:1px solid var(--border);
-}
-
-.stat:last-child{
-border-bottom:none;
+.flag{
+  background:#fff;
+  padding:7px 10px;
+  border-radius:14px;
+  font-size:1.6rem;
+  box-shadow:0 10px 24px rgba(6,43,95,.12);
 }
 
 h1{
-font-size:2.4rem;
-letter-spacing:-1px;
+  font-size:clamp(2.8rem,5.2vw,5rem);
+  line-height:1.04;
+  letter-spacing:-2px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  color:var(--text);
+  font-size:1.12rem;
+  line-height:1.7;
+  max-width:620px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.hero-image{
+  background:#fff;
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+
+.hero-image img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+}
+
+/* STATS */
+.stats{
+  margin-top:-34px;
+  position:relative;
+  z-index:3;
+}
+
+.stats-box{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:#fff;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+
+.stat{
+  text-align:center;
+  padding:26px 16px;
+  border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat-icon{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:#edf6ff;
+  display:grid;
+  place-items:center;
+  margin:0 auto 10px;
+  font-size:2rem;
+}
+
+.stat strong{
+  display:block;
+  font-size:2rem;
+  margin-bottom:5px;
+}
+
+.stat span{
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+/* SECTIONS */
+section{
+  padding:66px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:34px;
 }
 
 .section-title h2{
-font-size:2rem;
+  font-size:2.25rem;
 }
+
+.line{
+  width:55px;
+  height:4px;
+  background:var(--green);
+  border-radius:999px;
+  margin:12px auto 0;
+}
+
+/* EQUIPMENT IMAGE */
+.equipment-banner{
+  border-radius:32px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+
+.equipment-banner img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* HOW WE HELP */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
+}
+
+.step{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:26px;
+  box-shadow:0 10px 28px rgba(6,43,95,.08);
+  padding:22px 18px;
+  text-align:center;
+}
+
+.num{
+  width:28px;
+  height:28px;
+  background:var(--green);
+  color:#fff;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:.8rem;
+}
+
+.step-icon{
+  width:70px;
+  height:70px;
+  background:#edf6ff;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  margin:10px auto;
+  font-size:2rem;
+}
+
+.step h3{
+  margin-bottom:8px;
+}
+
+.step p{
+  color:var(--text);
+  line-height:1.55;
+  font-size:.92rem;
+}
+
+/* BANNER */
+.banner{
+  background:
+    linear-gradient(90deg,#062b5f 0%,rgba(6,43,95,.86) 58%,rgba(6,43,95,.52) 100%),
+    url('hero.jpg') center/cover no-repeat;
+  border-radius:32px;
+  padding:42px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:center;
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+
+.banner h2{
+  font-size:2rem;
+  margin-bottom:12px;
+}
+
+.banner p{
+  line-height:1.7;
+  max-width:700px;
+}
+
+.trust{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:20px;
+}
+
+.trust-item{
+  background:#f2f8ff;
+  border-radius:22px;
+  padding:18px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.trust-item strong{
+  font-size:1.6rem;
+}
+
+.trust-item span{
+  color:var(--text);
+  line-height:1.5;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.contact-box{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:28px;
+  box-shadow:0 10px 28px rgba(6,43,95,.08);
+  padding:30px;
+}
+
+.contact-box h2,
+.contact-box h3{
+  margin-bottom:16px;
+}
+
+.contact-box p{
+  color:var(--text);
+  line-height:1.7;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  background:#06182f;
+  color:#fff;
+  padding:36px 0;
+}
+
+footer .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+footer .brand img{
+  width:74px;
+  height:58px;
+}
+
+footer .brand strong,
+footer .brand span,
+footer p{
+  color:#fff;
+}
+
+.whatsapp{
+  position:fixed;
+  right:12px;
+  bottom:12px;
+  z-index:200;
+  background:#25d366;
+  color:#fff;
+  padding:13px 18px;
+  border-radius:999px;
+  font-weight:900;
+  box-shadow:0 12px 30px rgba(37,211,102,.32);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .container{
+    width:92%;
+  }
+
+  header{
+    position:relative;
+  }
+
+  .nav{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:10px;
+    padding:18px 0;
+  }
+
+  .brand{
+    justify-content:center;
+  }
+
+  .brand img{
+    width:78px;
+    height:58px;
+  }
+
+  .brand strong{
+    font-size:1.35rem;
+  }
+
+  .brand span{
+    font-size:.82rem;
+  }
+
+  .links,
+  .nav > .lang-btn,
+  .desktop-donate{
+    display:none;
+  }
+
+  .mobile-actions{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:8px;
+  }
+
+  .hero{
+    padding:40px 0 36px;
+    text-align:center;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+  .hero-image{
+    order:-1;
+  }
+
+  .hero-image img{
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .flags{
+    justify-content:center;
+    flex-wrap:wrap;
+    font-size:.92rem;
+  }
+
+  .flag{
+    font-size:1.35rem;
+  }
+
+  h1{
+    font-size:2.35rem;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:1rem;
+    margin:auto;
+  }
+
+  .hero-actions{
+    justify-content:center;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .stats{
+    margin-top:20px;
+  }
+
+  .stats-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat{
+    border-right:0;
+    border-bottom:1px solid var(--border);
+    padding:22px 10px;
+  }
+
+  .stat:nth-child(3),
+  .stat:nth-child(4){
+    border-bottom:0;
+  }
+
+  section{
+    padding:46px 0;
+  }
+
+  .section-title h2{
+    font-size:1.95rem;
+  }
+
+  .equipment-banner{
+    border-radius:24px;
+  }
+
+  .steps,
+  .trust,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .banner{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:30px 24px;
+    background:
+      linear-gradient(180deg,#062b5f 0%,rgba(6,43,95,.9) 100%),
+      url('hero.jpg') center/cover no-repeat;
+  }
+
+  footer .container{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .whatsapp{
+    right:8px;
+    bottom:8px;
+    transform:scale(.9);
+    transform-origin:right bottom;
+  }
+}
+
+@media(max-width:520px){
+  h1{
+    font-size:2.1rem;
+  }
+
+  .btn,
+  .lang-btn{
+    padding:12px 18px;
+    font-size:.95rem;
+  }
+
+  .stats-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat strong{
+    font-size:1.65rem;
+  }
+
+  .stat-icon{
+    width:54px;
+    height:54px;
+    font-size:1.6rem;
+  }
 }
 </style>
 </head>
@@ -417,174 +644,218 @@ font-size:2rem;
 <body>
 
 <header>
-<div class="container nav">
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="ReStart Mobility logo">
+      <div>
+        <strong>ReStart Mobility</strong>
+        <span data-en="Mobility. Independence. Hope." data-ro="Mobilitate. Independență. Speranță.">Mobility. Independence. Hope.</span>
+      </div>
+    </a>
 
-<div class="brand">
-<img src="logo.png" alt="logo">
-<div>
-<strong>ReStart Mobility</strong>
-<span>Mobility. Independence. Hope.</span>
-</div>
-</div>
+    <nav class="links">
+      <a href="#equipment" data-en="Equipment" data-ro="Echipamente">Equipment</a>
+      <a href="#help" data-en="How we help" data-ro="Cum ajutăm">How we help</a>
+      <a href="#mission" data-en="Mission" data-ro="Misiune">Mission</a>
+      <a href="#contact" data-en="Contact" data-ro="Contact">Contact</a>
+    </nav>
 
-<nav class="nav-links">
-<a href="#equipment">Equipment</a>
-<a href="#mission">Mission</a>
-<a href="#contact">Contact</a>
-</nav>
+    <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
+    <a class="btn btn-green desktop-donate" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate" data-ro="♡ Donează">♡ Donate</a>
 
-<a class="btn btn-white">EN | RO</a>
-<a class="btn btn-green" href="mailto:contact@restartmobility.org">♡ Donate</a>
-
-</div>
+    <div class="mobile-actions">
+      <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
+      <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate" data-ro="♡ Donează">♡ Donate</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-<div class="container hero-grid">
+<main id="top">
 
-<div>
-<div class="flags">
-<span class="flag">🇬🇧</span>
-<span class="flag">🇷🇴</span>
-<span>UK support for people with physical disabilities in Romania</span>
-</div>
+  <section class="hero">
+    <div class="container hero-grid">
 
-<h1>
-Give <span class="green">hope, mobility</span> and a <span class="green">better life</span> to people in need.
-</h1>
+      <div>
+        <div class="flags">
+          <span class="flag">🇬🇧</span>
+          <span class="flag">🇷🇴</span>
+          <span data-en="UK support for people with physical disabilities in Romania" data-ro="Sprijin din UK pentru persoane cu dizabilități fizice din România">UK support for people with physical disabilities in Romania</span>
+        </div>
 
-<p>
-ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.
-</p>
+        <h1>
+          <span data-en="Give" data-ro="Oferă">Give</span>
+          <span class="green" data-en="hope, mobility" data-ro="speranță, mobilitate">hope, mobility</span>
+          <span data-en="and a better life to people in need." data-ro="și o viață mai bună persoanelor în nevoie.">and a better life to people in need.</span>
+        </h1>
 
-<div class="hero-actions">
-<a class="btn btn-green">♡ Donate equipment</a>
-<a class="btn btn-white">♿ Request help</a>
-</div>
-</div>
+        <p data-en="ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most." data-ro="ReStart Mobility colectează, verifică și distribuie echipamente de mobilitate și echipamente medicale esențiale către persoanele care au cea mai mare nevoie.">
+          ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.
+        </p>
 
-<div class="hero-image">
-<img src="hero.jpg" alt="hero">
-</div>
+        <div class="hero-actions">
+          <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=I want to donate equipment" data-en="♡ Donate equipment" data-ro="♡ Donează echipament">♡ Donate equipment</a>
+          <a class="btn btn-white" href="mailto:contact@restartmobility.org?subject=Request help" data-en="♿ Request help" data-ro="♿ Cere ajutor">♿ Request help</a>
+        </div>
+      </div>
 
-</div>
-</section>
+      <div class="hero-image">
+        <img src="hero.jpg" alt="ReStart Mobility hero image">
+      </div>
 
-<div class="container stats">
-<div class="stats-box">
+    </div>
+  </section>
 
-<div class="stat">
-<strong>50+</strong>
-<span>Wheelchairs target</span>
-</div>
+  <div class="container stats">
+    <div class="stats-box">
+      <div class="stat">
+        <div class="stat-icon">♿</div>
+        <strong>50+</strong>
+        <span data-en="Wheelchairs target" data-ro="Scaune obiectiv">Wheelchairs target</span>
+      </div>
 
-<div class="stat">
-<strong>2</strong>
-<span>Countries supported</span>
-</div>
+      <div class="stat">
+        <div class="stat-icon">🌍</div>
+        <strong>2</strong>
+        <span data-en="Countries supported" data-ro="Țări sprijinite">Countries supported</span>
+      </div>
 
-<div class="stat">
-<strong>100%</strong>
-<span>Impact focused</span>
-</div>
+      <div class="stat">
+        <div class="stat-icon">💚</div>
+        <strong>100%</strong>
+        <span data-en="Impact focused" data-ro="Axat pe impact">Impact focused</span>
+      </div>
 
-<div class="stat">
-<strong>∞</strong>
-<span>Lives changed</span>
-</div>
+      <div class="stat">
+        <div class="stat-icon">🤝</div>
+        <strong data-en="Hope" data-ro="Speranță">Hope</strong>
+        <span data-en="Lives changed" data-ro="Vieți schimbate">Lives changed</span>
+      </div>
+    </div>
+  </div>
 
-</div>
-</div>
+  <section id="equipment">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-en="Equipment we provide" data-ro="Echipamente pe care le oferim">Equipment we provide</h2>
+        <div class="line"></div>
+      </div>
 
-<section id="equipment">
-<div class="container">
+      <div class="equipment-banner">
+        <img src="equipment-cards.png" alt="Electric wheelchairs, manual hoists and passenger lifts">
+      </div>
+    </div>
+  </section>
 
-<div class="section-title">
-<h2>Equipment we provide</h2>
-<div class="line"></div>
-</div>
+  <section id="help">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-en="How we help" data-ro="Cum ajutăm">How we help</h2>
+        <div class="line"></div>
+      </div>
 
-<div class="grid grid-3">
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <div class="step-icon">🎁</div>
+          <h3 data-en="We collect" data-ro="Colectăm">We collect</h3>
+          <p data-en="We collect mobility equipment from generous donors across the UK." data-ro="Colectăm echipamente de mobilitate de la donatori generoși din UK.">We collect mobility equipment from generous donors across the UK.</p>
+        </div>
 
-<div class="card">
-<img src="electric-wheelchair.jpg">
-<div class="card-content">
-<h3>Electric Wheelchairs</h3>
-<p>We provide high-quality electric wheelchairs that restore independence and freedom of movement.</p>
-<a class="learn">Learn more →</a>
-</div>
-</div>
+        <div class="step">
+          <span class="num">2</span>
+          <div class="step-icon">🔧</div>
+          <h3 data-en="We check" data-ro="Verificăm">We check</h3>
+          <p data-en="We clean, check and prepare each item responsibly." data-ro="Curățăm, verificăm și pregătim responsabil fiecare echipament.">We clean, check and prepare each item responsibly.</p>
+        </div>
 
-<div class="card">
-<img src="manual-hoist.jpg">
-<div class="card-content">
-<h3>Manual Hoists</h3>
-<p>We supply safe and reliable manual hoists to help with transfers and daily care.</p>
-<a class="learn">Learn more →</a>
-</div>
-</div>
+        <div class="step">
+          <span class="num">3</span>
+          <div class="step-icon">🚚</div>
+          <h3 data-en="We transport" data-ro="Transportăm">We transport</h3>
+          <p data-en="We organise safe transport from the UK to Romania." data-ro="Organizăm transport sigur din UK către România.">We organise safe transport from the UK to Romania.</p>
+        </div>
 
-<div class="card">
-<img src="passenger-lift.jpg">
-<div class="card-content">
-<h3>Passenger Lifts</h3>
-<p>We install and provide passenger lifts to help people with disabilities access homes and spaces.</p>
-<a class="learn">Learn more →</a>
-</div>
-</div>
+        <div class="step">
+          <span class="num">4</span>
+          <div class="step-icon">🤲</div>
+          <h3 data-en="We deliver" data-ro="Livrăm">We deliver</h3>
+          <p data-en="We deliver equipment to people who truly need it." data-ro="Livrăm echipamente persoanelor care au cu adevărat nevoie.">We deliver equipment to people who truly need it.</p>
+        </div>
 
-</div>
-</div>
-</section>
+        <div class="step">
+          <span class="num">5</span>
+          <div class="step-icon">🌟</div>
+          <h3 data-en="We change lives" data-ro="Schimbăm vieți">We change lives</h3>
+          <p data-en="We restore mobility, independence and dignity." data-ro="Redăm mobilitate, independență și demnitate.">We restore mobility, independence and dignity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="mission">
-<div class="container">
+  <section id="mission">
+    <div class="container">
+      <div class="banner">
+        <div>
+          <h2 data-en="Together, we can make a difference" data-ro="Împreună putem face o diferență">Together, we can make a difference</h2>
+          <p data-en="Your donation can give someone the chance to live with dignity, independence and hope." data-ro="Donația ta poate oferi unei persoane șansa de a trăi cu demnitate, independență și speranță.">Your donation can give someone the chance to live with dignity, independence and hope.</p>
+        </div>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate now" data-ro="♡ Donează acum">♡ Donate now</a>
+      </div>
 
-<div class="banner">
-<div>
-<h2>Together, we can make a difference</h2>
-<p>Your donation can give someone the chance to live with dignity, independence and hope.</p>
-</div>
+      <div class="trust">
+        <div class="trust-item"><strong>🛡️</strong><span><b data-en="Transparent" data-ro="Transparent">Transparent</b><br><span data-en="Clear about what we do and why." data-ro="Clari despre ceea ce facem și de ce.">Clear about what we do and why.</span></span></div>
+        <div class="trust-item"><strong>👥</strong><span><b data-en="Volunteer led" data-ro="Susținut de voluntari">Volunteer led</b><br><span data-en="People helping people." data-ro="Oameni care ajută oameni.">People helping people.</span></span></div>
+        <div class="trust-item"><strong>✅</strong><span><b data-en="Practical help" data-ro="Ajutor practic">Practical help</b><br><span data-en="Real equipment for real needs." data-ro="Echipamente reale pentru nevoi reale.">Real equipment for real needs.</span></span></div>
+        <div class="trust-item"><strong>💚</strong><span><b data-en="Hope" data-ro="Speranță">Hope</b><br><span data-en="Mobility, dignity and independence." data-ro="Mobilitate, demnitate și independență.">Mobility, dignity and independence.</span></span></div>
+      </div>
+    </div>
+  </section>
 
-<a class="btn btn-green">♡ Donate now</a>
-</div>
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-box">
+        <h2 data-en="Contact ReStart Mobility" data-ro="Contactează ReStart Mobility">Contact ReStart Mobility</h2>
+        <p><b>Email:</b> contact@restartmobility.org</p>
+        <p><b>WhatsApp:</b> +44 7828 052009</p>
+      </div>
 
-</div>
-</section>
+      <div class="contact-box">
+        <h3 data-en="We are currently looking for" data-ro="Căutăm în prezent">We are currently looking for</h3>
+        <p data-en="Electric wheelchairs, manual hoists, passenger lifts and other mobility equipment in good condition." data-ro="Scaune electrice, hoisturi manuale, lifturi pentru persoane cu dizabilități și alte echipamente de mobilitate în stare bună.">Electric wheelchairs, manual hoists, passenger lifts and other mobility equipment in good condition.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-<div class="container contact">
-
-<div class="contact-box">
-<h2>Contact ReStart Mobility</h2>
-<br>
-<p><b>Email:</b> contact@restartmobility.org</p>
-<br>
-<p><b>WhatsApp:</b> +44 7828 052009</p>
-</div>
-
-<div class="contact-box">
-<h2>We are currently looking for</h2>
-<br>
-<p>Electric wheelchairs, manual hoists, passenger lifts and mobility equipment in good condition.</p>
-</div>
-
-</div>
-</section>
+</main>
 
 <footer>
-<div class="container">
-<div>
-<strong>ReStart Mobility</strong>
-<br><br>
-<span>Mobility. Independence. Hope.</span>
-</div>
+  <div class="container">
+    <div class="brand">
+      <img src="logo.png" alt="ReStart Mobility logo">
+      <div>
+        <strong>ReStart Mobility</strong>
+        <span data-en="Mobility. Independence. Hope." data-ro="Mobilitate. Independență. Speranță.">Mobility. Independence. Hope.</span>
+      </div>
+    </div>
 
-<p>© 2026 ReStart Mobility</p>
-</div>
+    <p>© 2026 ReStart Mobility</p>
+  </div>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/447828052009">WhatsApp</a>
+
+<script>
+let currentLang = 'en';
+
+function toggleLanguage(){
+  currentLang = currentLang === 'en' ? 'ro' : 'en';
+  document.documentElement.lang = currentLang;
+
+  document.querySelectorAll('[data-en][data-ro]').forEach(el=>{
+    el.textContent = el.getAttribute('data-' + currentLang);
+  });
+}
+</script>
 
 </body>
 </html>
