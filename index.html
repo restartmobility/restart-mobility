@@ -160,6 +160,101 @@ footer .brand img{width:82px;height:70px}
   .equipment img{order:-1;height:210px}
   section{padding:42px 0}
   .whatsapp{font-size:.85rem;right:12px;bottom:12px;padding:12px 14px}
+}/* FINAL MOBILE FIX */
+@media(max-width:900px){
+
+  .nav > .lang-btn{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:none;
+  }
+
+  .mobile-actions{
+    display:flex !important;
+    grid-column:1 / -1;
+    justify-content:center;
+    gap:12px;
+    margin-top:8px;
+  }
+
+  header{
+    position:relative;
+  }
+
+  .hero{
+    min-height:auto;
+    background:none;
+    padding:20px 0 10px;
+  }
+
+  .hero-content{
+    max-width:100%;
+    padding:20px 0;
+    text-align:center;
+  }
+
+  .flags{
+    justify-content:center;
+  }
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  .hero-actions{
+    justify-content:center;
+  }
+
+  .stats{
+    margin-top:10px;
+  }
+
+  .grid3{
+    grid-template-columns:1fr;
+  }
+
+  .equipment{
+    grid-template-columns:1fr;
+    padding:0;
+    overflow:hidden;
+  }
+
+  .equipment div{
+    padding:22px;
+  }
+
+  .equipment img{
+    order:-1;
+    width:100%;
+    height:auto;
+    max-height:260px;
+    object-fit:contain;
+    background:white;
+    border-radius:22px 22px 0 0;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .arrow{
+    display:none;
+  }
+
+  .whatsapp{
+    bottom:18px;
+    right:14px;
+    font-size:14px;
+    padding:13px 16px;
+  }
+}
+
+@media(min-width:901px){
+  .mobile-actions{
+    display:none !important;
+  }
 }
 </style>
 </head>
