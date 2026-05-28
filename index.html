@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ReStart Mobility | Give hope, mobility and a better life</title>
+<title>ReStart Mobility | <span data-en="Give " data-ro="Oferă ">Give </span><span data-en="hope, mobility" data-ro="speranță, mobilitate">hope, mobility</span> <span data-en="and a " data-ro="și o ">and a </span><span data-en="better life" data-ro="viață mai bună">better life</span></title>
 <meta name="description" content="ReStart Mobility supports people with physical disabilities by collecting and donating electric wheelchairs, manual hoists, passenger lifts and mobility equipment between the UK and Romania." />
 <link rel="icon" href="logo.png" />
 <style>
@@ -30,6 +30,7 @@ header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:bl
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 25px;font-weight:900;border:0;box-shadow:var(--shadow)}
 .btn-green{background:var(--green);color:white}
 .btn-white{background:white;color:var(--blue);border:1px solid #b9cce5;box-shadow:none}
+.lang-btn{border:1px solid #b9cce5;background:white;color:var(--blue);border-radius:999px;padding:12px 16px;font-weight:900;cursor:pointer}
 .hero{
   background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.86) 48%,rgba(255,255,255,.05) 72%),
              url('hero.jpg') right center/contain no-repeat;
@@ -108,15 +109,16 @@ footer p, footer span, footer strong{color:white}
   <div class="container nav">
     <a class="brand" href="#top">
       <img src="logo.png" alt="ReStart Mobility logo">
-      <div><strong>ReStart Mobility</strong><span>Mobility. Independence. Hope.</span></div>
+      <div><strong>ReStart Mobility</strong><span data-en="Mobility. Independence. Hope." data-ro="Mobilitate. Independență. Speranță.">Mobility. Independence. Hope.</span></div>
     </a>
     <nav class="links">
-      <a href="#mission">Mission</a>
-      <a href="#equipment">Equipment</a>
-      <a href="#help">How we help</a>
-      <a href="#contact">Contact</a>
+      <a href="#mission" data-en="Mission" data-ro="Misiune">Mission</a>
+      <a href="#equipment" data-en="Equipment" data-ro="Echipamente">Equipment</a>
+      <a href="#help" data-en="How we help" data-ro="Cum ajutăm">How we help</a>
+      <a href="#contact" data-en="Contact" data-ro="Contact">Contact</a>
     </nav>
-    <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility">♡ Donate</a>
+    <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
+    <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate" data-ro="♡ Donează">♡ Donate</a>
   </div>
 </header>
 
@@ -124,12 +126,12 @@ footer p, footer span, footer strong{color:white}
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="flags"><span class="flag">🇬🇧</span><span class="flag">🇷🇴</span><span>UK support for people with physical disabilities in Romania</span></div>
-        <h1>Give <span class="green">hope, mobility</span> and a <span class="green">better life</span> to people in need.</h1>
-        <p>ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.</p>
+        <div class="flags"><span class="flag">🇬🇧</span><span class="flag">🇷🇴</span><span data-en="UK support for people with physical disabilities in Romania" data-ro="Sprijin din UK pentru persoane cu dizabilități fizice din România">UK support for people with physical disabilities in Romania</span></div>
+        <h1 data-en="Give " data-ro="Oferă ">Give <span class="green" data-en="hope, mobility" data-ro="speranță, mobilitate">hope, mobility</span> and a <span class="green" data-en="better life" data-ro="viață mai bună">better life</span> <span data-en="to people in need." data-ro="persoanelor aflate în nevoie.">to people in need.</span></h1>
+        <p data-en="ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most." data-ro="ReStart Mobility colectează, verifică și distribuie echipamente de mobilitate și echipamente medicale esențiale către persoanele care au cea mai mare nevoie.">ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.</p>
         <div class="hero-actions">
-          <a class="btn btn-green" href="#equipment">♡ Donate equipment →</a>
-          <a class="btn btn-white" href="#contact">♿ Request help</a>
+          <a class="btn btn-green" href="#equipment" data-en="♡ Donate equipment →" data-ro="♡ Donează echipament →">♡ Donate equipment →</a>
+          <a class="btn btn-white" href="#contact" data-en="♿ Request help" data-ro="♿ Cere ajutor">♿ Request help</a>
         </div>
       </div>
     </div>
@@ -137,27 +139,27 @@ footer p, footer span, footer strong{color:white}
 
   <div class="container stats">
     <div class="stats-box">
-      <div class="stat"><div class="ico">♿</div><strong>50+</strong><span>Chairs target</span></div>
-      <div class="stat"><div class="ico">🌍</div><strong>2</strong><span>UK & Romania</span></div>
-      <div class="stat"><div class="ico">👥</div><strong>100%</strong><span>Impact led</span></div>
-      <div class="stat"><div class="ico">💚</div><strong>Hope</strong><span>Lives changed</span></div>
+      <div class="stat"><div class="ico">♿</div><strong>50+</strong><span data-en="Chairs target" data-ro="scaune obiectiv">Chairs target</span></div>
+      <div class="stat"><div class="ico">🌍</div><strong>2</strong><span data-en="UK & Romania" data-ro="UK și România">UK & Romania</span></div>
+      <div class="stat"><div class="ico">👥</div><strong>100%</strong><span data-en="Impact led" data-ro="impact real">Impact led</span></div>
+      <div class="stat"><div class="ico">💚</div><strong>Hope</strong><span data-en="Lives changed" data-ro="vieți schimbate">Lives changed</span></div>
     </div>
   </div>
 
   <section id="equipment">
     <div class="container">
-      <div class="section-title"><h2>Equipment we provide</h2><div class="line"></div></div>
+      <div class="section-title"><h2 data-en="Equipment we provide" data-ro="Echipamente pe care le oferim">Equipment we provide</h2><div class="line"></div></div>
       <div class="grid3">
         <div class="card equipment">
-          <div><h3>Electric Wheelchairs</h3><p>We are looking for good quality electric wheelchairs, batteries, chargers and spare parts.</p><a href="mailto:contact@restartmobility.org?subject=Electric wheelchair donation">Learn more →</a></div>
+          <div><h3 data-en="Electric Wheelchairs" data-ro="Scaune electrice">Electric Wheelchairs</h3><p data-en="We are looking for good quality electric wheelchairs, batteries, chargers and spare parts." data-ro="Căutăm scaune electrice în stare bună, baterii, încărcătoare și piese utile.">We are looking for good quality electric wheelchairs, batteries, chargers and spare parts.</p><a href="mailto:contact@restartmobility.org?subject=Electric wheelchair donation" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div>
           <img src="electric-wheelchair.jpg" alt="Electric wheelchair">
         </div>
         <div class="card equipment">
-          <div><h3>Manual Hoists</h3><p>Safe and reliable manual hoists to support transfers and daily care.</p><a href="mailto:contact@restartmobility.org?subject=Manual hoist donation">Learn more →</a></div>
+          <div><h3 data-en="Manual Hoists" data-ro="Hoist manual">Manual Hoists</h3><p data-en="Safe and reliable manual hoists to support transfers and daily care." data-ro="Hoisturi manuale sigure și fiabile pentru transferuri și îngrijire zilnică.">Safe and reliable manual hoists to support transfers and daily care.</p><a href="mailto:contact@restartmobility.org?subject=Manual hoist donation" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div>
           <img src="manual-hoist.jpg" alt="Manual hoist">
         </div>
         <div class="card equipment">
-          <div><h3>Passenger Lifts</h3><p>Lifts and transfer equipment for people with disabilities to access homes and safe spaces.</p><a href="mailto:contact@restartmobility.org?subject=Passenger lift donation">Learn more →</a></div>
+          <div><h3 data-en="Passenger Lifts" data-ro="Lifturi pentru persoane cu dizabilități">Passenger Lifts</h3><p data-en="Lifts and transfer equipment for people with disabilities to access homes and safe spaces." data-ro="Lifturi și echipamente de transfer pentru persoane cu dizabilități, pentru acces mai sigur acasă și în alte spații.">Lifts and transfer equipment for people with disabilities to access homes and safe spaces.</p><a href="mailto:contact@restartmobility.org?subject=Passenger lift donation" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div>
           <img src="passenger-lift.jpg" alt="Passenger lift">
         </div>
       </div>
@@ -166,13 +168,13 @@ footer p, footer span, footer strong{color:white}
 
   <section id="help">
     <div class="container">
-      <div class="section-title"><h2>How we help</h2><div class="line"></div></div>
+      <div class="section-title"><h2 data-en="How we help" data-ro="Cum ajutăm">How we help</h2><div class="line"></div></div>
       <div class="grid5">
-        <div class="card step"><span class="num">1</span><div class="stepicon">🎁</div><h3>We collect</h3><p>We collect pre-loved equipment from donors across the UK.</p></div>
-        <div class="card step"><span class="num">2</span><div class="stepicon">🔧</div><h3>We refurbish</h3><p>We clean, check and prepare every item carefully.</p></div>
-        <div class="card step"><span class="num">3</span><div class="stepicon">🚚</div><h3>We transport</h3><p>We pack and transport equipment to Romania.</p></div>
-        <div class="card step"><span class="num">4</span><div class="stepicon">🤲</div><h3>We deliver</h3><p>We give equipment to people who truly need it.</p></div>
-        <div class="card step"><span class="num">5</span><div class="stepicon">🌟</div><h3>We change lives</h3><p>We restore mobility, independence and dignity.</p></div>
+        <div class="card step"><span class="num">1</span><div class="stepicon">🎁</div><h3 data-en="We collect" data-ro="Colectăm">We collect</h3><p data-en="We collect pre-loved equipment from donors across the UK." data-ro="Colectăm echipamente donate de oameni din UK.">We collect pre-loved equipment from donors across the UK.</p></div>
+        <div class="card step"><span class="num">2</span><div class="stepicon">🔧</div><h3 data-en="We refurbish" data-ro="Verificăm">We refurbish</h3><p data-en="We clean, check and prepare every item carefully." data-ro="Curățăm, verificăm și pregătim fiecare echipament cu grijă.">We clean, check and prepare every item carefully.</p></div>
+        <div class="card step"><span class="num">3</span><div class="stepicon">🚚</div><h3 data-en="We transport" data-ro="Transportăm">We transport</h3><p data-en="We pack and transport equipment to Romania." data-ro="Ambalăm și transportăm echipamentele către România.">We pack and transport equipment to Romania.</p></div>
+        <div class="card step"><span class="num">4</span><div class="stepicon">🤲</div><h3 data-en="We deliver" data-ro="Livrăm">We deliver</h3><p data-en="We give equipment to people who truly need it." data-ro="Oferim echipamente persoanelor care au cu adevărat nevoie.">We give equipment to people who truly need it.</p></div>
+        <div class="card step"><span class="num">5</span><div class="stepicon">🌟</div><h3 data-en="We change lives" data-ro="Schimbăm vieți">We change lives</h3><p data-en="We restore mobility, independence and dignity." data-ro="Redăm mobilitate, independență și demnitate.">We restore mobility, independence and dignity.</p></div>
       </div>
     </div>
   </section>
@@ -180,19 +182,19 @@ footer p, footer span, footer strong{color:white}
   <section id="mission">
     <div class="container mission-grid">
       <div class="card dark">
-        <h2>Our mission</h2>
-        <p>We create a practical bridge between unused mobility equipment in the UK and people with urgent needs in Romania.</p>
+        <h2 data-en="Our mission" data-ro="Misiunea noastră">Our mission</h2>
+        <p data-en="We create a practical bridge between unused mobility equipment in the UK and people with urgent needs in Romania." data-ro="Creăm o punte practică între echipamentele de mobilitate nefolosite din UK și persoanele cu nevoi urgente din România.">We create a practical bridge between unused mobility equipment in the UK and people with urgent needs in Romania.</p>
         <ul>
           <li>Electric wheelchairs</li>
-          <li>Manual hoists</li>
+          <li data-en="Manual hoists" data-ro="Hoisturi manuale">Manual hoists</li>
           <li>Passenger lifts</li>
-          <li>Other mobility aids</li>
+          <li data-en="Other mobility aids" data-ro="Alte echipamente de mobilitate">Other mobility aids</li>
         </ul>
       </div>
       <div class="card">
-        <h2>Partner with us</h2>
-        <p>We welcome support from care homes, hospitals, charities, transport companies, councils and sponsors.</p>
-        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Partnership with ReStart Mobility">Become a partner</a>
+        <h2 data-en="Partner with us" data-ro="Devino partener">Partner with us</h2>
+        <p data-en="We welcome support from care homes, hospitals, charities, transport companies, councils and sponsors." data-ro="Primim sprijin de la centre de îngrijire, spitale, organizații caritabile, firme de transport, autorități locale și sponsori.">We welcome support from care homes, hospitals, charities, transport companies, councils and sponsors.</p>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Partnership with ReStart Mobility" data-en="Become a partner" data-ro="Devino partener">Become a partner</a>
       </div>
     </div>
   </section>
@@ -201,16 +203,16 @@ footer p, footer span, footer strong{color:white}
     <div class="container">
       <div class="banner">
         <div>
-          <h2>Together, we can make a difference</h2>
-          <p>Your donation can give someone the chance to live with dignity, independence and hope.</p>
+          <h2 data-en="Together, we can make a difference" data-ro="Împreună putem face o diferență">Together, we can make a difference</h2>
+          <p data-en="Your donation can give someone the chance to live with dignity, independence and hope." data-ro="Donația ta poate oferi unei persoane șansa de a trăi cu demnitate, independență și speranță.">Your donation can give someone the chance to live with dignity, independence and hope.</p>
         </div>
-        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility">♡ Donate now</a>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate now" data-ro="♡ Donează acum">♡ Donate now</a>
       </div>
       <div class="trust">
-        <div><strong>🛡️</strong><span><b>100% Donated</b><br>Everything goes to people in need</span></div>
-        <div><strong>👥</strong><span><b>Run by volunteers</b><br>Passionate people making a difference</span></div>
-        <div><strong>✅</strong><span><b>Transparent & honest</b><br>Open about what we do</span></div>
-        <div><strong>🔒</strong><span><b>Secure donations</b><br>Safe, secure and trusted</span></div>
+        <div><strong>🛡️</strong><span><b data-en="100% Donated" data-ro="100% donat">100% Donated</b><br data-en="Everything goes to people in need" data-ro="Totul ajunge la persoane în nevoie">Everything goes to people in need</span></div>
+        <div><strong>👥</strong><span><b data-en="Run by volunteers" data-ro="Susținut de voluntari">Run by volunteers</b><br data-en="Passionate people making a difference" data-ro="Oameni implicați care fac diferența">Passionate people making a difference</span></div>
+        <div><strong>✅</strong><span><b data-en="Transparent & honest" data-ro="Transparent și onest">Transparent & honest</b><br data-en="Open about what we do" data-ro="Deschiși despre ceea ce facem">Open about what we do</span></div>
+        <div><strong>🔒</strong><span><b data-en="Secure donations" data-ro="Donații sigure">Secure donations</b><br data-en="Safe, secure and trusted" data-ro="Sigur, protejat și de încredere">Safe, secure and trusted</span></div>
       </div>
     </div>
   </section>
@@ -218,18 +220,18 @@ footer p, footer span, footer strong{color:white}
   <section id="contact">
     <div class="container contact-box">
       <div>
-        <h2>Contact ReStart Mobility</h2>
-        <p><b>Email:</b> <a href="mailto:contact@restartmobility.org">contact@restartmobility.org</a></p>
-        <p><b>WhatsApp:</b> <a href="https://wa.me/447828052009">+44 7828 052009</a></p>
-        <p><b>Location:</b> United Kingdom & Romania</p>
+        <h2 data-en="Contact ReStart Mobility" data-ro="Contactează ReStart Mobility">Contact ReStart Mobility</h2>
+        <p><b data-en="Email:" data-ro="Email:">Email:</b> <a href="mailto:contact@restartmobility.org">contact@restartmobility.org</a></p>
+        <p><b data-en="WhatsApp:" data-ro="WhatsApp:">WhatsApp:</b> <a href="https://wa.me/447828052009">+44 7828 052009</a></p>
+        <p><b data-en="Location:" data-ro="Locație:">Location:</b> United Kingdom & Romania</p>
       </div>
       <div class="card">
-        <h3>We are currently looking for</h3>
+        <h3 data-en="We are currently looking for" data-ro="Căutăm în prezent">We are currently looking for</h3>
         <ul>
           <li>Electric wheelchairs</li>
-          <li>Manual hoists</li>
-          <li>Passenger lifts for disabled people</li>
-          <li>Other mobility and care equipment</li>
+          <li data-en="Manual hoists" data-ro="Hoisturi manuale">Manual hoists</li>
+          <li data-en="Passenger lifts for disabled people" data-ro="Lifturi pentru persoane cu dizabilități">Passenger lifts for disabled people</li>
+          <li data-en="Other mobility and care equipment" data-ro="Alte echipamente de mobilitate și îngrijire">Other mobility and care equipment</li>
         </ul>
       </div>
     </div>
@@ -239,9 +241,21 @@ footer p, footer span, footer strong{color:white}
 <footer>
   <div class="container">
     <div class="brand"><img src="logo.png" alt="ReStart Mobility logo"><div><strong>ReStart Mobility</strong><span>Give hope, mobility and a better life to people in need.</span></div></div>
-    <p>© 2026 ReStart Mobility</p>
+    <p data-en="© 2026 ReStart Mobility" data-ro="© 2026 ReStart Mobility">© 2026 ReStart Mobility</p>
   </div>
 </footer>
-<a class="whatsapp" href="https://wa.me/447828052009">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/447828052009" data-en="WhatsApp" data-ro="WhatsApp">WhatsApp</a>
+
+<script>
+let currentLang = 'en';
+function toggleLanguage() {
+  currentLang = currentLang === 'en' ? 'ro' : 'en';
+  document.documentElement.lang = currentLang;
+  document.querySelectorAll('[data-en][data-ro]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + currentLang);
+  });
+}
+</script>
+
 </body>
 </html>
