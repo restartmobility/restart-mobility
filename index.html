@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReStart Mobility</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#062b5f}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:white;position:sticky;top:0}
+.logo{display:flex;align-items:center;gap:15px}
+.logo img{width:90px;border-radius:18px}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh;background:white}
+.left{padding:60px}
+h1{font-size:64px;line-height:1.05}
+.green{color:#18a34a}
+.btns{display:flex;gap:15px;margin-top:30px}
+.btn{padding:16px 28px;border-radius:40px;font-weight:bold;text-decoration:none}
+.greenbtn{background:#18a34a;color:white}
+.whitebtn{border:2px solid #0a3a7a;color:#0a3a7a}
+.right{
+background:url('hero.jpg') center/cover no-repeat;
+min-height:700px;
+}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px}
+.card{background:white;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+h1{font-size:42px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="logo.png">
+<div>
+<h2>ReStart Mobility</h2>
+<p>Mobility. Independence. Hope.</p>
+</div>
+</div>
+<a class="btn greenbtn">Donate</a>
+</header>
+
+<section class="hero">
+<div class="left">
+<p>🇬🇧 🇷🇴 UK support for people with physical disabilities in Romania</p>
+<h1>Give <span class="green">hope, mobility</span> and a <span class="green">better life</span> to people in need.</h1>
+<p>ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.</p>
+<div class="btns">
+<a class="btn greenbtn">Donate equipment</a>
+<a class="btn whitebtn">Request help</a>
+</div>
+</div>
+<div class="right"></div>
+</section>
+
+<div class="stats">
+<div class="card"><h2>50+</h2><p>chairs target</p></div>
+<div class="card"><h2>2</h2><p>countries</p></div>
+<div class="card"><h2>100%</h2><p>impact led</p></div>
+<div class="card"><h2>∞</h2><p>lives changed</p></div>
+</div>
+</body>
+</html>
