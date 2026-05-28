@@ -3,104 +3,163 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ReStart Mobility | <span data-en="Give " data-ro="Oferă ">Give </span><span data-en="hope, mobility" data-ro="speranță, mobilitate">hope, mobility</span> <span data-en="and a " data-ro="și o ">and a </span><span data-en="better life" data-ro="viață mai bună">better life</span></title>
-<meta name="description" content="ReStart Mobility supports people with physical disabilities by collecting and donating electric wheelchairs, manual hoists, passenger lifts and mobility equipment between the UK and Romania." />
+<title>ReStart Mobility | Give hope, mobility and a better life</title>
+<meta name="description" content="ReStart Mobility supports people with physical disabilities by providing electric wheelchairs, manual hoists, passenger lifts and mobility equipment between the UK and Romania." />
 <link rel="icon" href="logo.png" />
 <style>
 :root{
   --blue:#062b5f;
-  --blue2:#0a4f9e;
   --green:#159b50;
-  --soft:#f4f9ff;
-  --text:#0c2e56;
-  --muted:#607084;
+  --soft:#f5fbff;
+  --muted:#5d6e82;
   --shadow:0 18px 45px rgba(6,43,95,.14);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:white}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--blue);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 .container{width:min(1180px,92%);margin:auto}
-header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:20;border-bottom:1px solid #e7eef8}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:18px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid #e9eff8}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
 .brand{display:flex;align-items:center;gap:14px}
-.brand img{width:105px;height:82px;object-fit:contain;background:white;border-radius:24px;padding:5px;box-shadow:var(--shadow)}
-.brand strong{font-size:1.65rem;color:var(--blue);display:block;line-height:1}
-.brand span{font-size:.9rem;color:var(--muted)}
-.links{display:flex;gap:24px;font-weight:800;color:var(--blue);font-size:.95rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 25px;font-weight:900;border:0;box-shadow:var(--shadow)}
-.btn-green{background:var(--green);color:white}
-.btn-white{background:white;color:var(--blue);border:1px solid #b9cce5;box-shadow:none}
-.lang-btn{border:1px solid #b9cce5;background:white;color:var(--blue);border-radius:999px;padding:12px 16px;font-weight:900;cursor:pointer}
+.brand img{width:128px;height:96px;object-fit:contain}
+.brand strong{display:block;font-size:2rem;line-height:.95;color:var(--blue)}
+.brand span{font-size:.9rem;color:var(--blue);font-weight:700}
+.links{display:flex;gap:28px;align-items:center;font-size:.92rem;font-weight:900;color:var(--blue)}
+.btn,.lang-btn{border:0;border-radius:999px;padding:14px 22px;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 12px 26px rgba(21,155,80,.28)}
+.btn-white{background:#fff;color:var(--blue);border:1px solid #c9d8ed}
+.lang-btn{background:#fff;color:var(--blue);border:1px solid #c9d8ed;box-shadow:0 8px 22px rgba(6,43,95,.1)}
+.mobile-menu{display:none}
+
 .hero{
-  background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.86) 48%,rgba(255,255,255,.05) 72%),
-             url('hero.jpg') right center/contain no-repeat;
   min-height:720px;
+  background:
+    linear-gradient(90deg,#fff 0%,#fff 34%,rgba(255,255,255,.9) 45%,rgba(255,255,255,.25) 65%,rgba(255,255,255,0) 100%),
+    url('hero.jpg') right center/contain no-repeat;
   display:flex;
   align-items:center;
 }
-.hero-content{max-width:610px;padding:50px 0}
-.flags{display:flex;align-items:center;gap:10px;font-weight:900;margin-bottom:26px;color:var(--blue)}
-.flag{font-size:2rem;background:white;border-radius:12px;padding:5px 9px;box-shadow:0 8px 22px rgba(6,43,95,.12)}
-h1{font-size:clamp(2.8rem,6vw,5.3rem);line-height:1.02;margin:0 0 22px;letter-spacing:-2px;color:var(--blue)}
+.hero-content{max-width:610px;padding:34px 0 90px}
+.flags{display:flex;align-items:center;gap:10px;font-weight:900;margin-bottom:22px;font-size:.95rem}
+.flag{font-size:2rem;background:#fff;border-radius:12px;padding:5px 9px;box-shadow:0 8px 22px rgba(6,43,95,.12)}
+h1{font-size:clamp(3rem,5.5vw,5.1rem);line-height:1.03;margin:0 0 18px;letter-spacing:-2px;color:var(--blue)}
 .green{color:var(--green)}
-p{font-size:1.08rem;line-height:1.7;color:#14375d}
-.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
-.stats{margin-top:-48px;position:relative;z-index:5}
-.stats-box{display:grid;grid-template-columns:repeat(4,1fr);background:white;border-radius:26px;box-shadow:var(--shadow);overflow:hidden}
-.stat{text-align:center;padding:24px;border-right:1px solid #e9eef7}
+p{font-size:1.05rem;line-height:1.65;color:#143a60}
+.hero-actions{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px}
+.hero-actions .btn{min-width:205px}
+
+.stats{margin-top:-44px;position:relative;z-index:3}
+.stats-box{background:#fff;border-radius:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.stat{padding:24px;text-align:center;border-right:1px solid #e8eef7}
 .stat:last-child{border-right:0}
-.stat .ico{font-size:2.1rem}
-.stat strong{display:block;font-size:2rem;color:var(--blue)}
-.stat span{color:var(--muted);font-size:.95rem}
-section{padding:76px 0}
-.section-title{text-align:center;margin-bottom:34px}
-h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;color:var(--blue);margin:0 0 10px}
-.line{width:50px;height:4px;background:var(--green);border-radius:10px;margin:12px auto}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.card{background:white;border:1px solid #e7eef8;border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(6,43,95,.08)}
-.equipment{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;min-height:250px}
-.equipment img{width:100%;height:210px;object-fit:cover;border-radius:18px}
-.equipment h3,.step h3,.card h3{color:var(--blue);margin:0 0 10px}
-.equipment a{color:var(--blue2);font-weight:900}
-#help{background:var(--soft)}
-.step{text-align:center}
-.num{background:var(--green);color:white;width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;font-weight:900}
-.stepicon{font-size:2.3rem;background:#eaf4ff;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin:13px auto}
-.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-.dark{background:var(--blue);color:white}
-.dark h2,.dark h3,.dark p,.dark li{color:white}
-ul{padding-left:20px;line-height:1.9}
+.stat .icon{font-size:2.15rem;background:#eef6ff;width:66px;height:66px;border-radius:50%;display:grid;place-items:center;margin:0 auto 8px}
+.stat strong{display:block;font-size:2rem;line-height:1;color:var(--blue)}
+.stat span{font-size:.88rem;color:var(--muted)}
+section{padding:58px 0}
+.section-title{text-align:center;margin-bottom:26px}
+h2{font-size:2rem;margin:0;color:var(--blue)}
+.line{width:48px;height:4px;background:var(--green);border-radius:20px;margin:10px auto}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #e9eff8;border-radius:22px;box-shadow:0 10px 28px rgba(6,43,95,.08);padding:22px}
+.equipment{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;min-height:230px}
+.equipment img{width:100%;height:190px;object-fit:cover;border-radius:18px}
+.card h3{font-size:1.15rem;margin:0 0 10px;color:var(--blue)}
+.card p{font-size:.93rem;margin:0 0 14px}
+.card a{font-weight:900;color:#074fa8}
+#help{padding-top:16px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.step{text-align:center;padding:18px}
+.num{background:var(--green);color:white;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:900}
+.stepicon{background:#edf6ff;width:70px;height:70px;border-radius:50%;display:grid;place-items:center;font-size:2rem;margin:8px auto}
+.step p{font-size:.82rem}
+.step h3{font-size:.95rem}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.8rem;font-weight:900}
 .banner{
-  background:linear-gradient(90deg,#062b5f 0%,#062b5f 45%,rgba(6,43,95,.78) 62%,rgba(6,43,95,.16) 100%),
-             url('sunset.jpg') right center/cover no-repeat;
-  border-radius:28px;
-  padding:42px;
-  color:white;
-  box-shadow:var(--shadow);
+  background:
+    linear-gradient(90deg,#062b5f 0%,#062b5f 44%,rgba(6,43,95,.72) 62%,rgba(6,43,95,.15) 100%),
+    url('sunset.jpg') right center/cover no-repeat;
+  border-radius:24px;
+  padding:34px;
+  color:#fff;
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:20px;
+  grid-template-columns:1fr auto;
   align-items:center;
+  gap:20px;
+  box-shadow:var(--shadow);
 }
-.banner h2,.banner p{color:white}
-.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:#f1f7ff;border-radius:24px;padding:22px;margin-top:24px}
-.trust div{display:flex;gap:12px;align-items:flex-start}
-.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-footer{background:#06182f;color:white;padding:38px 0}
+.banner h2,.banner p{color:#fff}
+.banner h2{font-size:1.75rem}
+.trust{background:#f2f8ff;border-radius:20px;margin-top:18px;padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.trust div{display:flex;gap:10px;align-items:flex-start;font-size:.88rem}
+.trust strong{font-size:1.5rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+footer{background:#06182f;color:#fff;padding:36px 0}
 footer .container{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer img{width:80px;background:white;border-radius:18px;padding:5px}
-footer p, footer span, footer strong{color:white}
-.whatsapp{position:fixed;right:18px;bottom:18px;background:#25d366;color:white;padding:15px 20px;border-radius:999px;font-weight:900;box-shadow:var(--shadow);z-index:50}
-@media(max-width:920px){
+footer p,footer span,footer strong{color:#fff}
+footer .brand img{width:82px;height:70px}
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:80;background:#25d366;color:white;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:var(--shadow)}
+
+@media(max-width:900px){
+  .container{width:90%}
+  .nav{display:grid;grid-template-columns:1fr auto;align-items:center;padding:12px 0}
+  .brand img{width:86px;height:62px}
+  .brand strong{font-size:1.25rem}
+  .brand span{font-size:.72rem}
   .links{display:none}
-  .brand img{width:72px;height:62px}
-  .brand strong{font-size:1.35rem}
-  .hero{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.88) 48%,rgba(255,255,255,.2) 100%),url('hero.jpg') center bottom/cover no-repeat;min-height:760px;align-items:flex-start}
-  .hero-content{padding:34px 0 390px}
-  .stats-box,.grid3,.grid5,.mission-grid,.trust,.contact-box,.banner{grid-template-columns:1fr}
+  .mobile-menu{display:block;font-size:1.8rem;background:none;border:0;color:var(--blue)}
+  .desktop-donate{display:none}
+  .mobile-actions{grid-column:1 / -1;display:flex!important;gap:10px;justify-content:center;margin-top:10px}
+  .mobile-actions .lang-btn,.mobile-actions .btn{padding:11px 20px;box-shadow:0 8px 20px rgba(6,43,95,.1)}
+
+  .hero{
+    min-height:620px;
+    background:
+      linear-gradient(90deg,#fff 0%,rgba(255,255,255,.95) 38%,rgba(255,255,255,.55) 58%,rgba(255,255,255,0) 100%),
+      url('hero.jpg') right top/78% auto no-repeat;
+    align-items:flex-start;
+  }
+  .hero-content{max-width:58%;padding:62px 0 70px}
+  .flags{font-size:.72rem;line-height:1.25;margin-bottom:14px}
+  .flag{font-size:1.1rem;padding:3px 6px}
+  h1{font-size:2.15rem;letter-spacing:-1px;line-height:1.07}
+  p{font-size:.86rem}
+  .hero-actions{gap:8px}
+  .hero-actions .btn{min-width:0;padding:11px 14px;font-size:.78rem}
+
+  .stats{margin-top:-10px}
+  .stats-box{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:18px 10px;border-bottom:1px solid #e8eef7;border-right:0}
+  .stat .icon{width:52px;height:52px;font-size:1.6rem}
+  .stat strong{font-size:1.5rem}
+  .grid3,.steps,.trust,.contact{grid-template-columns:1fr}
+  .equipment{grid-template-columns:1.05fr .95fr}
+  .steps{gap:12px}
+  .arrow{display:none}
+  .banner{grid-template-columns:1fr;background:
+    linear-gradient(180deg,#062b5f 0%,rgba(6,43,95,.88) 55%,rgba(6,43,95,.35) 100%),
+    url('sunset.jpg') center/cover no-repeat}
+}
+
+@media(max-width:520px){
+  .container{width:92%}
+  .brand img{width:78px;height:56px}
+  .brand strong{font-size:1.1rem}
+  .hero{
+    min-height:655px;
+    background:
+      linear-gradient(180deg,#fff 0%,rgba(255,255,255,.92) 37%,rgba(255,255,255,.45) 66%,rgba(255,255,255,.05) 100%),
+      url('hero.jpg') right bottom/92% auto no-repeat;
+  }
+  .hero-content{max-width:100%;padding:28px 0 300px}
+  h1{font-size:2.2rem}
+  .hero-actions{flex-direction:row}
+  .hero-actions .btn{flex:1;white-space:nowrap}
+  .stats-box{grid-template-columns:repeat(2,1fr)}
   .equipment{grid-template-columns:1fr}
-  h1{font-size:2.75rem}
+  .equipment img{order:-1;height:210px}
+  section{padding:42px 0}
+  .whatsapp{font-size:.85rem;right:12px;bottom:12px;padding:12px 14px}
 }
 </style>
 </head>
@@ -109,16 +168,25 @@ footer p, footer span, footer strong{color:white}
   <div class="container nav">
     <a class="brand" href="#top">
       <img src="logo.png" alt="ReStart Mobility logo">
-      <div><strong>ReStart Mobility</strong><span data-en="Mobility. Independence. Hope." data-ro="Mobilitate. Independență. Speranță.">Mobility. Independence. Hope.</span></div>
+      <div>
+        <strong>ReStart Mobility</strong>
+        <span data-en="Mobility. Independence. Hope." data-ro="Mobilitate. Independență. Speranță.">Mobility. Independence. Hope.</span>
+      </div>
     </a>
     <nav class="links">
       <a href="#mission" data-en="Mission" data-ro="Misiune">Mission</a>
-      <a href="#equipment" data-en="Equipment" data-ro="Echipamente">Equipment</a>
       <a href="#help" data-en="How we help" data-ro="Cum ajutăm">How we help</a>
+      <a href="#impact" data-en="Our impact" data-ro="Impact">Our impact</a>
+      <a href="#equipment" data-en="Get involved" data-ro="Implică-te">Get involved</a>
       <a href="#contact" data-en="Contact" data-ro="Contact">Contact</a>
     </nav>
     <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
-    <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate" data-ro="♡ Donează">♡ Donate</a>
+    <a class="btn btn-green desktop-donate" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate" data-ro="♡ Donează">♡ Donate</a>
+    <button class="mobile-menu">☰</button>
+    <div class="mobile-actions" style="display:none">
+      <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
+      <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate" data-ro="♡ Donează">♡ Donate</a>
+    </div>
   </div>
 </header>
 
@@ -127,7 +195,7 @@ footer p, footer span, footer strong{color:white}
     <div class="container">
       <div class="hero-content">
         <div class="flags"><span class="flag">🇬🇧</span><span class="flag">🇷🇴</span><span data-en="UK support for people with physical disabilities in Romania" data-ro="Sprijin din UK pentru persoane cu dizabilități fizice din România">UK support for people with physical disabilities in Romania</span></div>
-        <h1 data-en="Give " data-ro="Oferă ">Give <span class="green" data-en="hope, mobility" data-ro="speranță, mobilitate">hope, mobility</span> and a <span class="green" data-en="better life" data-ro="viață mai bună">better life</span> <span data-en="to people in need." data-ro="persoanelor aflate în nevoie.">to people in need.</span></h1>
+        <h1><span data-en="Give" data-ro="Oferă">Give</span> <span class="green" data-en="hope, mobility" data-ro="speranță, mobilitate">hope, mobility</span> <span data-en="and a" data-ro="și o">and a</span> <span class="green" data-en="better life" data-ro="viață mai bună">better life</span> <span data-en="to people in need." data-ro="persoanelor în nevoie.">to people in need.</span></h1>
         <p data-en="ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most." data-ro="ReStart Mobility colectează, verifică și distribuie echipamente de mobilitate și echipamente medicale esențiale către persoanele care au cea mai mare nevoie.">ReStart Mobility collects, refurbishes and distributes mobility equipment and essential medical equipment to people who need them most.</p>
         <div class="hero-actions">
           <a class="btn btn-green" href="#equipment" data-en="♡ Donate equipment →" data-ro="♡ Donează echipament →">♡ Donate equipment →</a>
@@ -137,12 +205,12 @@ footer p, footer span, footer strong{color:white}
     </div>
   </section>
 
-  <div class="container stats">
+  <div class="container stats" id="impact">
     <div class="stats-box">
-      <div class="stat"><div class="ico">♿</div><strong>50+</strong><span data-en="Chairs target" data-ro="scaune obiectiv">Chairs target</span></div>
-      <div class="stat"><div class="ico">🌍</div><strong>2</strong><span data-en="UK & Romania" data-ro="UK și România">UK & Romania</span></div>
-      <div class="stat"><div class="ico">👥</div><strong>100%</strong><span data-en="Impact led" data-ro="impact real">Impact led</span></div>
-      <div class="stat"><div class="ico">💚</div><strong>Hope</strong><span data-en="Lives changed" data-ro="vieți schimbate">Lives changed</span></div>
+      <div class="stat"><div class="icon">♿</div><strong>50+</strong><span data-en="Chairs target" data-ro="Scaune obiectiv">Chairs target</span><br><span data-en="Next 12 months" data-ro="Următoarele 12 luni">Next 12 months</span></div>
+      <div class="stat"><div class="icon">🌍</div><strong>2</strong><span data-en="Countries" data-ro="Țări">Countries</span><br><span data-en="UK & Romania" data-ro="UK și România">UK & Romania</span></div>
+      <div class="stat"><div class="icon">👥</div><strong>100%</strong><span data-en="Impact led" data-ro="Impact real">Impact led</span><br><span data-en="Donations to people" data-ro="Donații către oameni">Donations to people</span></div>
+      <div class="stat"><div class="icon">💚</div><strong data-en="Countless" data-ro="Nenumărate">Countless</strong><span data-en="Lives changed" data-ro="Vieți schimbate">Lives changed</span><br><span data-en="Every single day" data-ro="În fiecare zi">Every single day</span></div>
     </div>
   </div>
 
@@ -150,18 +218,9 @@ footer p, footer span, footer strong{color:white}
     <div class="container">
       <div class="section-title"><h2 data-en="Equipment we provide" data-ro="Echipamente pe care le oferim">Equipment we provide</h2><div class="line"></div></div>
       <div class="grid3">
-        <div class="card equipment">
-          <div><h3 data-en="Electric Wheelchairs" data-ro="Scaune electrice">Electric Wheelchairs</h3><p data-en="We are looking for good quality electric wheelchairs, batteries, chargers and spare parts." data-ro="Căutăm scaune electrice în stare bună, baterii, încărcătoare și piese utile.">We are looking for good quality electric wheelchairs, batteries, chargers and spare parts.</p><a href="mailto:contact@restartmobility.org?subject=Electric wheelchair donation" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div>
-          <img src="electric-wheelchair.jpg" alt="Electric wheelchair">
-        </div>
-        <div class="card equipment">
-          <div><h3 data-en="Manual Hoists" data-ro="Hoist manual">Manual Hoists</h3><p data-en="Safe and reliable manual hoists to support transfers and daily care." data-ro="Hoisturi manuale sigure și fiabile pentru transferuri și îngrijire zilnică.">Safe and reliable manual hoists to support transfers and daily care.</p><a href="mailto:contact@restartmobility.org?subject=Manual hoist donation" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div>
-          <img src="manual-hoist.jpg" alt="Manual hoist">
-        </div>
-        <div class="card equipment">
-          <div><h3 data-en="Passenger Lifts" data-ro="Lifturi pentru persoane cu dizabilități">Passenger Lifts</h3><p data-en="Lifts and transfer equipment for people with disabilities to access homes and safe spaces." data-ro="Lifturi și echipamente de transfer pentru persoane cu dizabilități, pentru acces mai sigur acasă și în alte spații.">Lifts and transfer equipment for people with disabilities to access homes and safe spaces.</p><a href="mailto:contact@restartmobility.org?subject=Passenger lift donation" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div>
-          <img src="passenger-lift.jpg" alt="Passenger lift">
-        </div>
+        <div class="card equipment"><div><h3 data-en="Electric Wheelchairs" data-ro="Scaune electrice">Electric Wheelchairs</h3><p data-en="We provide high-quality electric wheelchairs that restore independence and freedom of movement." data-ro="Oferim scaune electrice de calitate care redau independența și libertatea de mișcare.">We provide high-quality electric wheelchairs that restore independence and freedom of movement.</p><a href="mailto:contact@restartmobility.org" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div><img src="electric-wheelchair.jpg" alt="Electric wheelchair"></div>
+        <div class="card equipment"><div><h3 data-en="Manual Hoists" data-ro="Hoisturi manuale">Manual Hoists</h3><p data-en="We supply safe and reliable manual hoists to help with transfers and daily care." data-ro="Oferim hoisturi manuale sigure și fiabile pentru transferuri și îngrijire zilnică.">We supply safe and reliable manual hoists to help with transfers and daily care.</p><a href="mailto:contact@restartmobility.org" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div><img src="manual-hoist.jpg" alt="Manual hoist"></div>
+        <div class="card equipment"><div><h3 data-en="Passenger Lifts" data-ro="Lifturi pentru persoane cu dizabilități">Passenger Lifts</h3><p data-en="We install and provide lifts for people with disabilities to access their homes and spaces." data-ro="Oferim lifturi pentru persoane cu dizabilități, pentru acces mai sigur acasă și în alte spații.">We install and provide lifts for people with disabilities to access their homes and spaces.</p><a href="mailto:contact@restartmobility.org" data-en="Learn more →" data-ro="Află mai mult →">Learn more →</a></div><img src="passenger-lift.jpg" alt="Passenger lift"></div>
       </div>
     </div>
   </section>
@@ -169,93 +228,60 @@ footer p, footer span, footer strong{color:white}
   <section id="help">
     <div class="container">
       <div class="section-title"><h2 data-en="How we help" data-ro="Cum ajutăm">How we help</h2><div class="line"></div></div>
-      <div class="grid5">
-        <div class="card step"><span class="num">1</span><div class="stepicon">🎁</div><h3 data-en="We collect" data-ro="Colectăm">We collect</h3><p data-en="We collect pre-loved equipment from donors across the UK." data-ro="Colectăm echipamente donate de oameni din UK.">We collect pre-loved equipment from donors across the UK.</p></div>
-        <div class="card step"><span class="num">2</span><div class="stepicon">🔧</div><h3 data-en="We refurbish" data-ro="Verificăm">We refurbish</h3><p data-en="We clean, check and prepare every item carefully." data-ro="Curățăm, verificăm și pregătim fiecare echipament cu grijă.">We clean, check and prepare every item carefully.</p></div>
-        <div class="card step"><span class="num">3</span><div class="stepicon">🚚</div><h3 data-en="We transport" data-ro="Transportăm">We transport</h3><p data-en="We pack and transport equipment to Romania." data-ro="Ambalăm și transportăm echipamentele către România.">We pack and transport equipment to Romania.</p></div>
-        <div class="card step"><span class="num">4</span><div class="stepicon">🤲</div><h3 data-en="We deliver" data-ro="Livrăm">We deliver</h3><p data-en="We give equipment to people who truly need it." data-ro="Oferim echipamente persoanelor care au cu adevărat nevoie.">We give equipment to people who truly need it.</p></div>
+      <div class="steps">
+        <div class="card step"><span class="num">1</span><div class="stepicon">🎁</div><h3 data-en="We collect" data-ro="Colectăm">We collect</h3><p data-en="We collect pre-loved equipment from generous donors across the UK." data-ro="Colectăm echipamente donate de oameni generoși din UK.">We collect pre-loved equipment from generous donors across the UK.</p></div>
+        <div class="arrow">→</div>
+        <div class="card step"><span class="num">2</span><div class="stepicon">🔧</div><h3 data-en="We refurbish" data-ro="Verificăm">We refurbish</h3><p data-en="Our volunteers clean, repair and prepare each item." data-ro="Voluntarii verifică, curăță și pregătesc fiecare echipament.">Our volunteers clean, repair and prepare each item.</p></div>
+        <div class="arrow">→</div>
+        <div class="card step"><span class="num">3</span><div class="stepicon">🚚</div><h3 data-en="We transport" data-ro="Transportăm">We transport</h3><p data-en="We carefully pack and transport the equipment to Romania." data-ro="Ambalăm și transportăm echipamentele către România.">We carefully pack and transport the equipment to Romania.</p></div>
+        <div class="arrow">→</div>
+        <div class="card step"><span class="num">4</span><div class="stepicon">🤲</div><h3 data-en="We deliver" data-ro="Livrăm">We deliver</h3><p data-en="We give the equipment to people who truly need it." data-ro="Oferim echipamentele persoanelor care au cu adevărat nevoie.">We give the equipment to people who truly need it.</p></div>
+        <div class="arrow">→</div>
         <div class="card step"><span class="num">5</span><div class="stepicon">🌟</div><h3 data-en="We change lives" data-ro="Schimbăm vieți">We change lives</h3><p data-en="We restore mobility, independence and dignity." data-ro="Redăm mobilitate, independență și demnitate.">We restore mobility, independence and dignity.</p></div>
       </div>
     </div>
   </section>
 
   <section id="mission">
-    <div class="container mission-grid">
-      <div class="card dark">
-        <h2 data-en="Our mission" data-ro="Misiunea noastră">Our mission</h2>
-        <p data-en="We create a practical bridge between unused mobility equipment in the UK and people with urgent needs in Romania." data-ro="Creăm o punte practică între echipamentele de mobilitate nefolosite din UK și persoanele cu nevoi urgente din România.">We create a practical bridge between unused mobility equipment in the UK and people with urgent needs in Romania.</p>
-        <ul>
-          <li>Electric wheelchairs</li>
-          <li data-en="Manual hoists" data-ro="Hoisturi manuale">Manual hoists</li>
-          <li>Passenger lifts</li>
-          <li data-en="Other mobility aids" data-ro="Alte echipamente de mobilitate">Other mobility aids</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2 data-en="Partner with us" data-ro="Devino partener">Partner with us</h2>
-        <p data-en="We welcome support from care homes, hospitals, charities, transport companies, councils and sponsors." data-ro="Primim sprijin de la centre de îngrijire, spitale, organizații caritabile, firme de transport, autorități locale și sponsori.">We welcome support from care homes, hospitals, charities, transport companies, councils and sponsors.</p>
-        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Partnership with ReStart Mobility" data-en="Become a partner" data-ro="Devino partener">Become a partner</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
     <div class="container">
       <div class="banner">
-        <div>
-          <h2 data-en="Together, we can make a difference" data-ro="Împreună putem face o diferență">Together, we can make a difference</h2>
-          <p data-en="Your donation can give someone the chance to live with dignity, independence and hope." data-ro="Donația ta poate oferi unei persoane șansa de a trăi cu demnitate, independență și speranță.">Your donation can give someone the chance to live with dignity, independence and hope.</p>
-        </div>
+        <div><h2 data-en="Together, we can make a difference" data-ro="Împreună putem face o diferență">Together, we can make a difference</h2><p data-en="Your donation can give someone the chance to live with dignity, independence and hope." data-ro="Donația ta poate oferi unei persoane șansa de a trăi cu demnitate, independență și speranță.">Your donation can give someone the chance to live with dignity, independence and hope.</p></div>
         <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donation for ReStart Mobility" data-en="♡ Donate now" data-ro="♡ Donează acum">♡ Donate now</a>
       </div>
       <div class="trust">
-        <div><strong>🛡️</strong><span><b data-en="100% Donated" data-ro="100% donat">100% Donated</b><br data-en="Everything goes to people in need" data-ro="Totul ajunge la persoane în nevoie">Everything goes to people in need</span></div>
-        <div><strong>👥</strong><span><b data-en="Run by volunteers" data-ro="Susținut de voluntari">Run by volunteers</b><br data-en="Passionate people making a difference" data-ro="Oameni implicați care fac diferența">Passionate people making a difference</span></div>
-        <div><strong>✅</strong><span><b data-en="Transparent & honest" data-ro="Transparent și onest">Transparent & honest</b><br data-en="Open about what we do" data-ro="Deschiși despre ceea ce facem">Open about what we do</span></div>
-        <div><strong>🔒</strong><span><b data-en="Secure donations" data-ro="Donații sigure">Secure donations</b><br data-en="Safe, secure and trusted" data-ro="Sigur, protejat și de încredere">Safe, secure and trusted</span></div>
+        <div><strong>🛡️</strong><span><b data-en="100% Donated" data-ro="100% donat">100% Donated</b><br><span data-en="Everything goes to people in need" data-ro="Totul ajunge la persoane în nevoie">Everything goes to people in need</span></span></div>
+        <div><strong>👥</strong><span><b data-en="Run by volunteers" data-ro="Susținut de voluntari">Run by volunteers</b><br><span data-en="Passionate people making a difference" data-ro="Oameni implicați care fac diferența">Passionate people making a difference</span></span></div>
+        <div><strong>✅</strong><span><b data-en="Transparent & honest" data-ro="Transparent și onest">Transparent & honest</b><br><span data-en="Open about what we do and why" data-ro="Deschiși despre ceea ce facem și de ce">Open about what we do and why</span></span></div>
+        <div><strong>🔒</strong><span><b data-en="Secure donations" data-ro="Donații sigure">Secure donations</b><br><span data-en="Safe, secure and trusted" data-ro="Sigur, protejat și de încredere">Safe, secure and trusted</span></span></div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="container contact-box">
-      <div>
-        <h2 data-en="Contact ReStart Mobility" data-ro="Contactează ReStart Mobility">Contact ReStart Mobility</h2>
-        <p><b data-en="Email:" data-ro="Email:">Email:</b> <a href="mailto:contact@restartmobility.org">contact@restartmobility.org</a></p>
-        <p><b data-en="WhatsApp:" data-ro="WhatsApp:">WhatsApp:</b> <a href="https://wa.me/447828052009">+44 7828 052009</a></p>
-        <p><b data-en="Location:" data-ro="Locație:">Location:</b> United Kingdom & Romania</p>
-      </div>
-      <div class="card">
-        <h3 data-en="We are currently looking for" data-ro="Căutăm în prezent">We are currently looking for</h3>
-        <ul>
-          <li>Electric wheelchairs</li>
-          <li data-en="Manual hoists" data-ro="Hoisturi manuale">Manual hoists</li>
-          <li data-en="Passenger lifts for disabled people" data-ro="Lifturi pentru persoane cu dizabilități">Passenger lifts for disabled people</li>
-          <li data-en="Other mobility and care equipment" data-ro="Alte echipamente de mobilitate și îngrijire">Other mobility and care equipment</li>
-        </ul>
-      </div>
+    <div class="container contact">
+      <div><h2 data-en="Contact ReStart Mobility" data-ro="Contactează ReStart Mobility">Contact ReStart Mobility</h2><p><b>Email:</b> contact@restartmobility.org</p><p><b>WhatsApp:</b> +44 7828 052009</p></div>
+      <div class="card"><h3 data-en="We are currently looking for" data-ro="Căutăm în prezent">We are currently looking for</h3><p data-en="Electric wheelchairs, manual hoists, passenger lifts and other mobility equipment." data-ro="Scaune electrice, hoisturi manuale, lifturi pentru persoane cu dizabilități și alte echipamente de mobilitate.">Electric wheelchairs, manual hoists, passenger lifts and other mobility equipment.</p></div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="container">
-    <div class="brand"><img src="logo.png" alt="ReStart Mobility logo"><div><strong>ReStart Mobility</strong><span>Give hope, mobility and a better life to people in need.</span></div></div>
-    <p data-en="© 2026 ReStart Mobility" data-ro="© 2026 ReStart Mobility">© 2026 ReStart Mobility</p>
+    <div class="brand"><img src="logo.png" alt="ReStart Mobility logo"><div><strong>ReStart Mobility</strong><span data-en="Give hope, mobility and a better life to people in need." data-ro="Oferă speranță, mobilitate și o viață mai bună persoanelor în nevoie.">Give hope, mobility and a better life to people in need.</span></div></div>
+    <p>© 2026 ReStart Mobility</p>
   </div>
 </footer>
-<a class="whatsapp" href="https://wa.me/447828052009" data-en="WhatsApp" data-ro="WhatsApp">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/447828052009">WhatsApp</a>
 
 <script>
 let currentLang = 'en';
-function toggleLanguage() {
+function toggleLanguage(){
   currentLang = currentLang === 'en' ? 'ro' : 'en';
   document.documentElement.lang = currentLang;
-  document.querySelectorAll('[data-en][data-ro]').forEach(el => {
+  document.querySelectorAll('[data-en][data-ro]').forEach(el=>{
     el.textContent = el.getAttribute('data-' + currentLang);
   });
 }
 </script>
-
 </body>
 </html>
