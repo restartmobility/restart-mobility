@@ -1,0 +1,5 @@
+1. Delete the current 4.64 MB index.html from GitHub.
+2. Upload ALL files from this package to the repository root.
+3. Keep the existing logo.png.
+4. Confirm filenames are unchanged.
+5. Commit changes and wait 1–2 minutes for Vercel.

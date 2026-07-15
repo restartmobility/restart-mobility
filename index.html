@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ReStart Mobility CIC | Mobility. Independence. Hope.</title>
+<meta name="description" content="ReStart Mobility CIC provides affordable refurbished mobility equipment in the UK and reinvests its income to support disabled people and families in the UK and Romania.">
+<link rel="icon" href="logo.png">
+
+<style>
+:root{
+  --blue:#062b5f;
+  --green:#159b50;
+  --pink:#df2f72;
+  --light:#f5fbff;
+  --text:#294663;
+  --muted:#64748b;
+  --border:#e3edf7;
+  --shadow:0 18px 42px rgba(6,43,95,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--blue);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+section{padding:72px 0}
+p{color:var(--text);line-height:1.7}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 23px;border-radius:999px;font-weight:900;border:1px solid transparent;cursor:pointer;font-size:1rem}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 12px 28px rgba(21,155,80,.25)}
+.btn-pink{background:var(--pink);color:#fff;box-shadow:0 12px 28px rgba(223,47,114,.22)}
+.btn-white{background:#fff;color:var(--blue);border-color:#c9d8ed}
+.green{color:var(--green)}
+.section-title{text-align:center;margin-bottom:36px}
+.section-title h2{font-size:clamp(2rem,4vw,2.7rem)}
+.section-title p{max-width:760px;margin:12px auto 0}
+.line{width:58px;height:4px;background:var(--green);border-radius:999px;margin:13px auto 0}
+.card{background:#fff;border:1px solid var(--border);border-radius:28px;box-shadow:0 10px 30px rgba(6,43,95,.08);padding:30px}
+
+.campaign-bar{background:var(--pink);color:#fff;text-align:center;padding:11px 15px;font-weight:900}
+.campaign-bar a{text-decoration:underline}
+
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:20px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:82px;height:62px;object-fit:contain}
+.brand strong{display:block;font-size:1.55rem;line-height:1}
+.brand span{font-size:.86rem;font-weight:700}
+.links{display:flex;justify-content:center;gap:20px;font-weight:900;font-size:.92rem}
+.lang-btn{background:#fff;border:1px solid #c9d8ed;color:var(--blue);border-radius:999px;padding:12px 18px;font-weight:900;cursor:pointer}
+.mobile-actions{display:none}
+
+.hero{padding:54px 0 68px;background:linear-gradient(180deg,#fff 0%,#f7fbff 100%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:#edf7ff;padding:9px 13px;border-radius:999px;font-weight:900;margin-bottom:18px}
+h1{font-size:clamp(2.8rem,5vw,4.9rem);line-height:1.03;letter-spacing:-2px;margin-bottom:20px}
+.hero p{font-size:1.12rem;max-width:620px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-image{border-radius:32px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);background:#fff}
+.hero-image img{width:100%;height:535px;object-fit:cover}
+
+.trust-strip{margin-top:-34px;position:relative;z-index:3}
+.trust-box{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:26px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.trust-stat{text-align:center;padding:25px 14px;border-right:1px solid var(--border)}
+.trust-stat:last-child{border-right:0}
+.trust-stat strong{display:block;font-size:1.55rem;margin-bottom:5px}
+.trust-stat span{color:var(--muted);font-size:.92rem}
+
+.model-grid,.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.model-list{display:grid;gap:14px;margin-top:22px}
+.model-item{display:flex;gap:13px;align-items:flex-start;background:#f6fbff;border-radius:18px;padding:16px}
+.model-item b{display:block;margin-bottom:4px}
+.model-photo,.founder-photo{border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+.model-photo img,.founder-photo img{width:100%;height:500px;object-fit:cover}
+.founder-quote{font-size:1.3rem;font-style:italic;color:var(--green);font-weight:700;margin:20px 0;padding-left:18px;border-left:4px solid var(--green)}
+.founder-highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.founder-highlights div{background:#f4f8fb;border-radius:14px;padding:14px;font-weight:800}
+
+.crowdfunder{background:#061f43;color:#fff}
+.crowdfunder p{color:#e5eef8}
+.crowd-grid{display:grid;grid-template-columns:1fr 300px;gap:35px;align-items:center}
+.goal{font-size:clamp(3rem,7vw,5.5rem);line-height:1;margin:12px 0}
+.fund-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+.fund-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px}
+.qr-card{background:#fff;color:var(--blue);padding:22px;border-radius:28px;text-align:center}
+.qr-card img{width:220px;margin:0 auto 12px}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-card{position:relative;border-radius:24px;overflow:hidden;min-height:330px;box-shadow:var(--shadow)}
+.gallery-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.gallery-overlay{position:absolute;inset:auto 0 0;padding:55px 20px 20px;background:linear-gradient(transparent,rgba(6,24,47,.93));color:#fff}
+.gallery-overlay p{color:#fff}
+
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.team-card{background:#fff;border:1px solid var(--border);border-radius:26px;overflow:hidden;box-shadow:0 10px 30px rgba(6,43,95,.08)}
+.team-card img{width:100%;height:320px;object-fit:cover}
+.team-card .body{padding:22px}
+.role{color:var(--green);font-weight:900;margin:6px 0 10px}
+
+.volunteer{background:var(--light)}
+.volunteer-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}
+.role-card{background:#fff;border-radius:18px;padding:16px;border:1px solid var(--border);font-weight:800}
+.volunteer-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+.volunteer-photo img{width:100%;height:490px;object-fit:cover}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.equipment-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+.equipment-list div{background:#f3f8fd;border-radius:16px;padding:14px;font-weight:800}
+.bank-box{background:#f8fbff;border:2px dashed #b9cce0;border-radius:22px;padding:22px;margin-top:18px}
+.bank-row{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid var(--border)}
+.bank-row:last-child{border-bottom:0}
+.bank-box small{display:block;color:var(--muted);margin-top:12px}
+
+footer{background:#06182f;color:#fff;padding:38px 0}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
+footer p,footer a{color:#fff}
+.footer-links{display:grid;gap:9px}
+.legal{border-top:1px solid rgba(255,255,255,.15);margin-top:25px;padding-top:20px;font-size:.9rem}
+.whatsapp{position:fixed;right:12px;bottom:12px;z-index:200;background:#25d366;color:#fff;padding:13px 18px;border-radius:999px;font-weight:900;box-shadow:0 12px 30px rgba(37,211,102,.32)}
+
+@media(max-width:920px){
+  header{position:relative}
+  .nav{grid-template-columns:1fr;text-align:center}
+  .brand{justify-content:center}
+  .links,.nav>.lang-btn,.desktop-donate{display:none}
+  .mobile-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+  .hero-grid,.model-grid,.founder-grid,.crowd-grid,.volunteer-grid,.two-col,.footer-grid{grid-template-columns:1fr}
+  .hero{text-align:center}
+  .hero-image{order:-1}
+  .hero-image img,.model-photo img,.founder-photo img,.volunteer-photo img{height:auto}
+  .hero-actions{justify-content:center}
+  .trust-box{grid-template-columns:repeat(2,1fr)}
+  .trust-stat{border-bottom:1px solid var(--border)}
+  .gallery,.team-grid{grid-template-columns:1fr}
+  .gallery-card{min-height:390px}
+}
+@media(max-width:560px){
+  section{padding:50px 0}
+  h1{font-size:2.25rem;letter-spacing:-1px}
+  .hero-actions .btn{width:100%}
+  .fund-list,.roles,.equipment-list,.founder-highlights{grid-template-columns:1fr}
+  .trust-box{grid-template-columns:1fr}
+  .trust-stat{border-right:0}
+  .bank-row{display:block}
+}
+</style>
+</head>
+
+<body>
+<div class="campaign-bar">
+  <span data-en="🎯 Our £25,000 Crowdfunder is live — help us restore mobility and independence."
+        data-ro="🎯 Campania noastră Crowdfunder de £25.000 este activă — ajută-ne să redăm mobilitate și independență.">
+    🎯 Our £25,000 Crowdfunder is live — help us restore mobility and independence.
+  </span>
+  <a href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener"
+     data-en="Donate now" data-ro="Donează acum">Donate now</a>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="ReStart Mobility logo">
+      <div>
+        <strong>ReStart Mobility</strong>
+        <span data-en="Mobility. Independence. Hope." data-ro="Mobilitate. Independență. Speranță.">Mobility. Independence. Hope.</span>
+      </div>
+    </a>
+
+    <nav class="links">
+      <a href="#model" data-en="Our model" data-ro="Modelul nostru">Our model</a>
+      <a href="#founder" data-en="Founder" data-ro="Fondator">Founder</a>
+      <a href="#crowdfunder">Crowdfunder</a>
+      <a href="#impact" data-en="Impact" data-ro="Impact">Impact</a>
+      <a href="#team" data-en="Our team" data-ro="Echipa">Our team</a>
+      <a href="#volunteer" data-en="Volunteer" data-ro="Voluntariat">Volunteer</a>
+      <a href="#contact" data-en="Contact" data-ro="Contact">Contact</a>
+    </nav>
+
+    <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
+    <a class="btn btn-pink desktop-donate" href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener"
+       data-en="❤ Support us" data-ro="❤ Susține-ne">❤ Support us</a>
+
+    <div class="mobile-actions">
+      <button class="lang-btn" onclick="toggleLanguage()">EN | RO</button>
+      <a class="btn btn-pink" href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener"
+         data-en="❤ Support us" data-ro="❤ Susține-ne">❤ Support us</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">
+        🇬🇧 🇷🇴
+        <span data-en="A UK Community Interest Company creating social impact"
+              data-ro="O companie de interes comunitar din UK care creează impact social">
+          A UK Community Interest Company creating social impact
+        </span>
+      </div>
+      <h1>
+        <span data-en="Restoring mobility." data-ro="Redăm mobilitatea.">Restoring mobility.</span>
+        <span class="green" data-en="Changing lives." data-ro="Schimbăm vieți.">Changing lives.</span>
+      </h1>
+      <p data-en="ReStart Mobility CIC provides affordable refurbished mobility equipment in the UK and reinvests its income to support disabled people and families who cannot afford essential equipment in the UK and Romania."
+         data-ro="ReStart Mobility CIC oferă echipamente de mobilitate recondiționate la prețuri accesibile în UK și reinvestește veniturile pentru a sprijini persoanele cu dizabilități și familiile care nu își permit echipamente esențiale în UK și România.">
+        ReStart Mobility CIC provides affordable refurbished mobility equipment in the UK and reinvests its income to support disabled people and families who cannot afford essential equipment in the UK and Romania.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-pink" href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener"
+           data-en="❤ Support our Crowdfunder" data-ro="❤ Susține campania Crowdfunder">❤ Support our Crowdfunder</a>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Donate mobility equipment"
+           data-en="♿ Donate equipment" data-ro="♿ Donează echipament">♿ Donate equipment</a>
+        <a class="btn btn-white" href="mailto:contact@restartmobility.org?subject=Request mobility support"
+           data-en="Request support" data-ro="Solicită ajutor">Request support</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hero-hoist.png" alt="A person being supported safely with a mobile patient hoist">
+    </div>
+  </div>
+</section>
+
+<div class="container trust-strip">
+  <div class="trust-box">
+    <div class="trust-stat"><strong>UK CIC</strong><span data-en="Registered social enterprise" data-ro="Întreprindere socială înregistrată">Registered social enterprise</span></div>
+    <div class="trust-stat"><strong>£25,000</strong><span data-en="Crowdfunder goal" data-ro="Obiectiv Crowdfunder">Crowdfunder goal</span></div>
+    <div class="trust-stat"><strong>UK & Romania</strong><span data-en="Communities supported" data-ro="Comunități sprijinite">Communities supported</span></div>
+    <div class="trust-stat"><strong>100%</strong><span data-en="Surplus reinvested in our mission" data-ro="Surplus reinvestit în misiune">Surplus reinvested in our mission</span></div>
+  </div>
+</div>
+
+<section id="model">
+  <div class="container model-grid">
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:0">
+        <h2 data-en="How our social model works" data-ro="Cum funcționează modelul nostru social">How our social model works</h2>
+        <div class="line" style="margin-left:0"></div>
+      </div>
+      <p data-en="We combine practical support with a sustainable social-enterprise model so that every donation, purchase and partnership can help more people."
+         data-ro="Combinăm sprijinul practic cu un model sustenabil de întreprindere socială, astfel încât fiecare donație, achiziție și parteneriat să poată ajuta mai mulți oameni.">
+        We combine practical support with a sustainable social-enterprise model so that every donation, purchase and partnership can help more people.
+      </p>
+      <div class="model-list">
+        <div class="model-item"><span>🎁</span><div><b data-en="We collect donated equipment" data-ro="Colectăm echipamente donate">We collect donated equipment</b><p data-en="We source wheelchairs, hoists, beds and other mobility equipment across the UK." data-ro="Colectăm scaune rulante, hoisturi, paturi și alte echipamente de mobilitate din UK.">We source wheelchairs, hoists, beds and other mobility equipment across the UK.</p></div></div>
+        <div class="model-item"><span>🛒</span><div><b data-en="We purchase when needs are urgent" data-ro="Cumpărăm când nevoile sunt urgente">We purchase when needs are urgent</b><p data-en="Where a suitable donation is unavailable, we aim to buy the equipment a person urgently needs." data-ro="Când nu există o donație potrivită, ne propunem să cumpărăm echipamentul de care o persoană are nevoie urgent.">Where a suitable donation is unavailable, we aim to buy the equipment a person urgently needs.</p></div></div>
+        <div class="model-item"><span>🔧</span><div><b data-en="We inspect and refurbish" data-ro="Verificăm și recondiționăm">We inspect and refurbish</b><p data-en="Equipment is cleaned, checked and prepared responsibly before reuse." data-ro="Echipamentele sunt curățate, verificate și pregătite responsabil înainte de reutilizare.">Equipment is cleaned, checked and prepared responsibly before reuse.</p></div></div>
+        <div class="model-item"><span>♿</span><div><b data-en="We provide affordable equipment in the UK" data-ro="Oferim echipamente accesibile în UK">We provide affordable equipment in the UK</b><p data-en="Selected refurbished equipment is offered at prices below typical market rates, with flexible options considered where appropriate." data-ro="Anumite echipamente recondiționate sunt oferite la prețuri sub nivelul obișnuit al pieței, cu opțiuni flexibile acolo unde este potrivit.">Selected refurbished equipment is offered at prices below typical market rates, with flexible options considered where appropriate.</p></div></div>
+        <div class="model-item"><span>💚</span><div><b data-en="Every surplus is reinvested" data-ro="Fiecare surplus este reinvestit">Every surplus is reinvested</b><p data-en="Income supports people who cannot afford essential mobility equipment in the UK and Romania." data-ro="Veniturile sprijină persoanele care nu își permit echipamente esențiale de mobilitate în UK și România.">Income supports people who cannot afford essential mobility equipment in the UK and Romania.</p></div></div>
+      </div>
+    </div>
+    <div class="model-photo">
+      <img src="volunteer-transport.png" alt="ReStart Mobility volunteers loading equipment into a van">
+    </div>
+  </div>
+</section>
+
+
+<section id="founder">
+  <div class="container founder-grid">
+    <div class="founder-photo">
+      <img src="mihaela-founder.jpg" alt="Mihaela Cotruta, Founder and Director of ReStart Mobility CIC">
+    </div>
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:0">
+        <h2 data-en="Meet the Founder" data-ro="Cunoaște fondatorul">Meet the Founder</h2>
+        <div class="line" style="margin-left:0"></div>
+      </div>
+      <h3 style="font-size:2rem;margin-top:14px">Mihaela Cotruta</h3>
+      <div class="role" data-en="Founder & Director | ReStart Mobility CIC" data-ro="Fondator și Director | ReStart Mobility CIC">Founder & Director | ReStart Mobility CIC</div>
+      <div class="founder-quote" data-en="I founded ReStart Mobility because I believe that access to essential mobility equipment should never depend on a person's ability to pay." data-ro="Am fondat ReStart Mobility deoarece cred că accesul la echipamente esențiale de mobilitate nu ar trebui să depindă niciodată de capacitatea unei persoane de a plăti.">I founded ReStart Mobility because I believe that access to essential mobility equipment should never depend on a person's ability to pay.</div>
+      <p data-en="For 19 years, I have dedicated my career to supporting people with physical disabilities, complex care needs and life-changing conditions." data-ro="Timp de 19 ani, mi-am dedicat cariera sprijinirii persoanelor cu dizabilități fizice, nevoi complexe de îngrijire și afecțiuni care le-au schimbat viața.">For 19 years, I have dedicated my career to supporting people with physical disabilities, complex care needs and life-changing conditions.</p>
+      <p data-en="Throughout those years, I have witnessed how the right mobility equipment can restore independence, reduce isolation and give people the confidence to live with dignity." data-ro="În toți acești ani, am văzut cum echipamentul potrivit poate reda independența, reduce izolarea și oferi oamenilor încrederea de a trăi cu demnitate.">Throughout those years, I have witnessed how the right mobility equipment can restore independence, reduce isolation and give people the confidence to live with dignity.</p>
+      <p data-en="These experiences inspired me to establish ReStart Mobility CIC, a UK Community Interest Company committed to collecting, purchasing, refurbishing and delivering essential mobility equipment to those who need it most." data-ro="Aceste experiențe m-au inspirat să înființez ReStart Mobility CIC, o companie de interes comunitar din UK dedicată colectării, cumpărării, recondiționării și livrării de echipamente esențiale celor care au cea mai mare nevoie.">These experiences inspired me to establish ReStart Mobility CIC, a UK Community Interest Company committed to collecting, purchasing, refurbishing and delivering essential mobility equipment to those who need it most.</p>
+      <p data-en="Our mission goes beyond providing equipment. We are building a sustainable social enterprise that reinvests every surplus into helping people with disabilities across the United Kingdom and Romania." data-ro="Misiunea noastră depășește simpla furnizare de echipamente. Construim o întreprindere socială sustenabilă care reinvestește fiecare surplus pentru a ajuta persoanele cu dizabilități din Regatul Unit și România.">Our mission goes beyond providing equipment. We are building a sustainable social enterprise that reinvests every surplus into helping people with disabilities across the United Kingdom and Romania.</p>
+      <div class="founder-highlights">
+        <div>✔ <span data-en="19 years in care" data-ro="19 ani în îngrijire">19 years in care</span></div>
+        <div>✔ <span data-en="Founder of ReStart Mobility CIC" data-ro="Fondator ReStart Mobility CIC">Founder of ReStart Mobility CIC</span></div>
+        <div>✔ <span data-en="UK & Romania social impact" data-ro="Impact social în UK și România">UK & Romania social impact</span></div>
+        <div>✔ <span data-en="Independence and inclusion" data-ro="Independență și incluziune">Independence and inclusion</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="crowdfunder" class="crowdfunder">
+  <div class="container crowd-grid">
+    <div>
+      <h2 data-en="Help us reach our first major goal" data-ro="Ajută-ne să atingem primul nostru obiectiv major">Help us reach our first major goal</h2>
+      <div class="goal">£25,000</div>
+      <p data-en="Your donation will help ReStart Mobility collect, purchase, refurbish, store and transport essential mobility equipment."
+         data-ro="Donația ta va ajuta ReStart Mobility să colecteze, cumpere, recondiționeze, depoziteze și transporte echipamente esențiale de mobilitate.">
+        Your donation will help ReStart Mobility collect, purchase, refurbish, store and transport essential mobility equipment.
+      </p>
+      <div class="fund-list">
+        <div class="fund-item">♿ <span data-en="Electric wheelchairs" data-ro="Scaune rulante electrice">Electric wheelchairs</span></div>
+        <div class="fund-item">🏥 <span data-en="Patient hoists and medical beds" data-ro="Hoisturi și paturi medicale">Patient hoists and medical beds</span></div>
+        <div class="fund-item">🚐 <span data-en="Vehicle and collection costs" data-ro="Vehicul și costuri de colectare">Vehicle and collection costs</span></div>
+        <div class="fund-item">🔧 <span data-en="Repairs and refurbishment" data-ro="Reparații și recondiționare">Repairs and refurbishment</span></div>
+        <div class="fund-item">📦 <span data-en="Storage and logistics" data-ro="Depozitare și logistică">Storage and logistics</span></div>
+        <div class="fund-item">🤝 <span data-en="Urgent individual support" data-ro="Sprijin urgent individual">Urgent individual support</span></div>
+      </div>
+      <a class="btn btn-pink" href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener"
+         data-en="Donate through Crowdfunder" data-ro="Donează prin Crowdfunder">Donate through Crowdfunder</a>
+    </div>
+    <div class="qr-card">
+      <img src="crowdfunder-qr.png" alt="QR code for ReStart Mobility Crowdfunder">
+      <h3 data-en="Scan to support us" data-ro="Scanează pentru a ne susține">Scan to support us</h3>
+      <p data-en="Every contribution helps restore mobility, dignity and independence."
+         data-ro="Fiecare contribuție ajută la redarea mobilității, demnității și independenței.">
+        Every contribution helps restore mobility, dignity and independence.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="The impact we are building" data-ro="Impactul pe care îl construim">The impact we are building</h2>
+      <div class="line"></div>
+      <p data-en="Our work is about practical equipment, safer care and the freedom to live with greater independence."
+         data-ro="Munca noastră înseamnă echipamente practice, îngrijire mai sigură și libertatea de a trăi cu mai multă independență.">
+        Our work is about practical equipment, safer care and the freedom to live with greater independence.
+      </p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-card">
+        <img src="ceiling-hoist-installation.png" alt="Ceiling hoist being installed">
+        <div class="gallery-overlay"><h3 data-en="Safer care at home" data-ro="Îngrijire mai sigură acasă">Safer care at home</h3><p data-en="Supporting safer transfers and greater dignity." data-ro="Sprijin pentru transferuri mai sigure și mai multă demnitate.">Supporting safer transfers and greater dignity.</p></div>
+      </div>
+      <div class="gallery-card">
+        <img src="wheelchair-handover.png" alt="Electric wheelchair being handed over beside a ReStart Mobility van">
+        <div class="gallery-overlay"><h3 data-en="Equipment given a second life" data-ro="Echipamente cărora li se oferă o a doua viață">Equipment given a second life</h3><p data-en="Turning unused equipment into independence." data-ro="Transformăm echipamentele nefolosite în independență.">Turning unused equipment into independence.</p></div>
+      </div>
+      <div class="gallery-card">
+        <img src="volunteer-transport.png" alt="Volunteers loading mobility equipment into a van">
+        <div class="gallery-overlay"><h3 data-en="Delivered with care" data-ro="Livrat cu grijă">Delivered with care</h3><p data-en="Collecting, preparing and transporting vital equipment." data-ro="Colectăm, pregătim și transportăm echipamente vitale.">Collecting, preparing and transporting vital equipment.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="Meet our team" data-ro="Cunoaște echipa noastră">Meet our team</h2>
+      <div class="line"></div>
+      <p data-en="ReStart Mobility is powered by people who believe that disability should never mean losing dignity, opportunity or independence."
+         data-ro="ReStart Mobility este susținută de oameni care cred că dizabilitatea nu ar trebui să însemne pierderea demnității, oportunităților sau independenței.">
+        ReStart Mobility is powered by people who believe that disability should never mean losing dignity, opportunity or independence.
+      </p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <img src="gabriela-volunteer.jpg" alt="Gabriela, ReStart Mobility volunteer">
+        <div class="body">
+          <h3>Gabriela</h3>
+          <div class="role" data-en="Volunteer" data-ro="Voluntar">Volunteer</div>
+          <p data-en="Gabriela gives her time and energy to support the organisation, help it grow and reach more people who need mobility support." data-ro="Gabriela își oferă timpul și energia pentru a sprijini organizația, a o ajuta să crească și să ajungă la mai multe persoane care au nevoie de sprijin pentru mobilitate.">Gabriela gives her time and energy to support the organisation, help it grow and reach more people who need mobility support.</p>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <img src="luke-ambassador.jpg" alt="Luke Walker using his powered wheelchair outdoors">
+        <div class="body">
+          <h3>Luke Walker</h3>
+          <div class="role" data-en="ReStart Mobility Ambassador" data-ro="Ambasador ReStart Mobility">ReStart Mobility Ambassador</div>
+          <p data-en="Luke brings lived experience and a powerful voice to our mission, helping raise awareness of accessibility, dignity and independent living."
+             data-ro="Luke aduce experiență personală și o voce puternică misiunii noastre, contribuind la conștientizarea importanței accesibilității, demnității și vieții independente.">
+            Luke brings lived experience and a powerful voice to our mission, helping raise awareness of accessibility, dignity and independent living.
+          </p>
+        </div>
+      </article>
+
+      <article class="team-card">
+        <img src="sam-volunteer.jpg" alt="Sam standing outdoors using crutches">
+        <div class="body">
+          <h3>Sam</h3>
+          <div class="role" data-en="Volunteer" data-ro="Voluntar">Volunteer</div>
+          <p data-en="Sam supports ReStart Mobility by helping raise awareness and representing the importance of practical mobility support."
+             data-ro="Sam sprijină ReStart Mobility prin creșterea gradului de conștientizare și prin reprezentarea importanței sprijinului practic pentru mobilitate.">
+            Sam supports ReStart Mobility by helping raise awareness and representing the importance of practical mobility support.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="volunteer" class="volunteer">
+  <div class="container volunteer-grid">
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:0">
+        <h2 data-en="Become a ReStart Mobility volunteer" data-ro="Devino voluntar ReStart Mobility">Become a ReStart Mobility volunteer</h2>
+        <div class="line" style="margin-left:0"></div>
+      </div>
+      <p data-en="You do not need specialist experience to make a difference. We welcome people who can offer time, practical help, professional skills or a voice in their community."
+         data-ro="Nu ai nevoie de experiență specializată pentru a face o diferență. Primim cu bucurie persoane care pot oferi timp, ajutor practic, competențe profesionale sau o voce în comunitatea lor.">
+        You do not need specialist experience to make a difference. We welcome people who can offer time, practical help, professional skills or a voice in their community.
+      </p>
+      <div class="roles">
+        <div class="role-card">🚚 <span data-en="Equipment collection and transport" data-ro="Colectare și transport de echipamente">Equipment collection and transport</span></div>
+        <div class="role-card">💷 <span data-en="Fundraising and community events" data-ro="Strângere de fonduri și evenimente">Fundraising and community events</span></div>
+        <div class="role-card">📱 <span data-en="Social media and content creation" data-ro="Social media și creare de conținut">Social media and content creation</span></div>
+        <div class="role-card">🧽 <span data-en="Cleaning and preparing equipment" data-ro="Curățarea și pregătirea echipamentelor">Cleaning and preparing equipment</span></div>
+        <div class="role-card">🤝 <span data-en="Partnerships and administration" data-ro="Parteneriate și administrație">Partnerships and administration</span></div>
+        <div class="role-card">📣 <span data-en="Local ambassadors in the UK and Romania" data-ro="Ambasadori locali în UK și România">Local ambassadors in the UK and Romania</span></div>
+      </div>
+      <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Volunteer application&body=Name:%0D%0ALocation:%0D%0APhone:%0D%0AHow I would like to help:%0D%0AAvailability:"
+         data-en="Apply to volunteer" data-ro="Aplică pentru voluntariat">Apply to volunteer</a>
+    </div>
+    <div class="volunteer-photo">
+      <img src="gabriela-volunteer.jpg" alt="Gabriela, ReStart Mobility volunteer">
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="Support ReStart Mobility" data-ro="Susține ReStart Mobility">Support ReStart Mobility</h2>
+      <div class="line"></div>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <h3 data-en="Donate mobility equipment" data-ro="Donează echipamente de mobilitate">Donate mobility equipment</h3>
+        <p data-en="Do you have equipment that is no longer needed? We would be grateful to hear from individuals, care providers, mobility businesses and community organisations."
+           data-ro="Ai echipamente de care nu mai este nevoie? Ne-ar face plăcere să auzim de la persoane fizice, furnizori de îngrijire, companii de mobilitate și organizații comunitare.">
+          Do you have equipment that is no longer needed? We would be grateful to hear from individuals, care providers, mobility businesses and community organisations.
+        </p>
+        <div class="equipment-list">
+          <div>♿ <span data-en="Electric and manual wheelchairs" data-ro="Scaune rulante electrice și manuale">Electric and manual wheelchairs</span></div>
+          <div>🏥 <span data-en="Patient hoists" data-ro="Hoisturi pentru pacienți">Patient hoists</span></div>
+          <div>🛏️ <span data-en="Medical beds" data-ro="Paturi medicale">Medical beds</span></div>
+          <div>🦽 <span data-en="Mobility scooters" data-ro="Scutere de mobilitate">Mobility scooters</span></div>
+          <div>🪜 <span data-en="Ramps and access equipment" data-ro="Rampe și echipamente de acces">Ramps and access equipment</span></div>
+          <div>🦯 <span data-en="Walking and assistive equipment" data-ro="Echipamente de mers și asistive">Walking and assistive equipment</span></div>
+        </div>
+        <a class="btn btn-green" href="mailto:contact@restartmobility.org?subject=Equipment donation"
+           data-en="Offer equipment" data-ro="Oferă echipament">Offer equipment</a>
+      </div>
+
+      <div class="card">
+        <h3 data-en="Donate by bank transfer" data-ro="Donează prin transfer bancar">Donate by bank transfer</h3>
+        <p data-en="Direct donations help us respond quickly to urgent needs and cover collection, refurbishment and delivery costs."
+           data-ro="Donațiile directe ne ajută să răspundem rapid nevoilor urgente și să acoperim costurile de colectare, recondiționare și livrare.">
+          Direct donations help us respond quickly to urgent needs and cover collection, refurbishment and delivery costs.
+        </p>
+        <div class="bank-box">
+          <div class="bank-row"><b data-en="Account name" data-ro="Numele contului">Account name</b><span>Restart Mobility CIC</span></div>
+          <div class="bank-row"><b data-en="Bank" data-ro="Banca">Bank</b><span>Co-operative Bank</span></div>
+          <div class="bank-row"><b data-en="Sort code" data-ro="Sort code">Sort code</b><span>08-92-99</span></div>
+          <div class="bank-row"><b data-en="Account number" data-ro="Numărul contului">Account number</b><span>67527238</span></div>
+          <div class="bank-row"><b data-en="Suggested reference" data-ro="Referință recomandată">Suggested reference</b><span>DONATION</span></div>
+          <small data-en="Please use only the official ReStart Mobility CIC business account shown above. For sponsorship or larger donations, contact us first."
+                 data-ro="Folosește doar contul oficial de business ReStart Mobility CIC afișat mai sus. Pentru sponsorizări sau donații mari, contactează-ne mai întâi.">
+            Please use only the official ReStart Mobility CIC business account shown above. For sponsorship or larger donations, contact us first.
+          </small>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+          <a class="btn btn-white" href="mailto:contact@restartmobility.org">contact@restartmobility.org</a>
+          <a class="btn btn-green" href="https://wa.me/447828052009" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <img src="logo.png" alt="ReStart Mobility logo">
+          <div><strong>ReStart Mobility CIC</strong><span>Mobility. Independence. Hope.</span></div>
+        </div>
+        <p style="margin-top:14px" data-en="A UK social enterprise improving access to mobility equipment and reinvesting income to create lasting community impact."
+           data-ro="O întreprindere socială din UK care îmbunătățește accesul la echipamente de mobilitate și reinvestește veniturile pentru impact comunitar durabil.">
+          A UK social enterprise improving access to mobility equipment and reinvesting income to create lasting community impact.
+        </p>
+      </div>
+      <div class="footer-links">
+        <b data-en="Get involved" data-ro="Implică-te">Get involved</b>
+        <a href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener">Crowdfunder</a>
+        <a href="#volunteer" data-en="Volunteer" data-ro="Voluntariat">Volunteer</a>
+        <a href="mailto:contact@restartmobility.org?subject=Equipment donation" data-en="Donate equipment" data-ro="Donează echipament">Donate equipment</a>
+        <a href="mailto:contact@restartmobility.org?subject=Partnership enquiry" data-en="Partnerships" data-ro="Parteneriate">Partnerships</a>
+      </div>
+      <div class="footer-links">
+        <b data-en="Contact" data-ro="Contact">Contact</b>
+        <a href="mailto:contact@restartmobility.org">contact@restartmobility.org</a>
+        <a href="https://wa.me/447828052009" target="_blank" rel="noopener">+44 7828 052009</a>
+        <span>restartmobility.org</span>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 ReStart Mobility CIC · Company Number: 17297212 · Registered in England and Wales · Community Interest Company (CIC)</p>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/447828052009" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+let currentLang = 'en';
+function toggleLanguage(){
+  currentLang = currentLang === 'en' ? 'ro' : 'en';
+  document.documentElement.lang = currentLang;
+  document.querySelectorAll('[data-en][data-ro]').forEach(el=>{
+    el.textContent = el.getAttribute('data-' + currentLang);
+  });
+}
+</script>
+</body>
+</html>
