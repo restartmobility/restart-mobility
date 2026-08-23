@@ -82,10 +82,22 @@ h1{font-size:clamp(2.8rem,5vw,4.9rem);line-height:1.03;letter-spacing:-2px;margi
 
 #progress .model-list{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:24px;
   margin-top:34px;
   align-items:stretch;
+}
+
+#progress .model-item{
+  grid-column:span 2;
+}
+
+#progress .model-item:nth-child(4){
+  grid-column:2 / span 2;
+}
+
+#progress .model-item:nth-child(5){
+  grid-column:4 / span 2;
 }
 
 #progress .model-item{
@@ -177,6 +189,11 @@ h1{font-size:clamp(2.8rem,5vw,4.9rem);line-height:1.03;letter-spacing:-2px;margi
 @media(max-width:920px){
   #progress .model-list{
     grid-template-columns:repeat(2,1fr);
+  }
+  #progress .model-item,
+  #progress .model-item:nth-child(4),
+  #progress .model-item:nth-child(5){
+    grid-column:auto;
   }
   #progress .progress-photo{
     height:330px;
@@ -497,7 +514,7 @@ footer p,footer a{color:#fff}
 
       <div class="model-item">
         <div class="progress-photo">
-          <img src="file_0000000034e081f49e738335fac90c4ca.png" alt="Donated electric medical bed being assembled and installed in Romania">
+          <img src="file_0000000034e081f49e73835fac90c4ca.png" alt="Donated electric medical bed being assembled and installed in Romania">
         </div>
         <div class="progress-copy">
           <span class="progress-step" data-en="Step 3" data-ro="Pasul 3">Step 3</span>
