@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://restartmobility.org/sitemap.xml
