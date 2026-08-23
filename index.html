@@ -71,7 +71,80 @@ h1{font-size:clamp(2.8rem,5vw,4.9rem);line-height:1.03;letter-spacing:-2px;margi
 .founder-grid{display:grid;grid-template-columns:360px 1fr;gap:52px;align-items:center}
 .model-list{display:grid;gap:14px;margin-top:22px}
 .model-item{display:flex;gap:13px;align-items:flex-start;background:#f6fbff;border-radius:18px;padding:16px}
-.model-item b{display:block;margin-bottom:4px}
+.model-item b{display:block;margin-bottom:4px}/* OUR PROGRESS - PROFESSIONAL CARDS */
+#progress{
+  background:#f8fbfd;
+}
+
+#progress .model-list{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin-top:34px;
+  align-items:stretch;
+}
+
+#progress .model-item{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  height:100%;
+}
+
+#progress .progress-photo{
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#eef4f7;
+}
+
+#progress .progress-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+#progress .model-item > div:last-child{
+  padding:20px;
+}
+
+#progress .model-item b{
+  display:block;
+  font-size:1.08rem;
+  line-height:1.3;
+  color:var(--blue);
+  margin-bottom:10px;
+}
+
+#progress .model-item span{
+  display:block;
+  color:var(--muted);
+  line-height:1.6;
+  font-size:.96rem;
+}
+
+@media(max-width:900px){
+  #progress .model-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:560px){
+  #progress .model-list{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  #progress .progress-photo{
+    aspect-ratio:16/10;
+  }
+}
 .model-photo{border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
 .founder-photo{max-width:360px;margin:auto;border-radius:26px;overflow:hidden;box-shadow:0 18px 38px rgba(6,43,95,.16)}
 .model-photo img{width:100%;height:500px;object-fit:cover}
