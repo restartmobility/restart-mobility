@@ -356,6 +356,24 @@ footer p,footer a{color:#fff}
 body.ro .en { display: none; }
 body.ro .ro { display: inline; }
 
+
+/* LATEST COLLECTION & LOGISTICS SUPPORT */
+.latest-update{background:linear-gradient(180deg,#f7fbff 0%,#fff 100%)}
+.update-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+.update-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.update-gallery img{width:100%;height:255px;object-fit:cover;border-radius:20px;border:1px solid var(--border);box-shadow:0 10px 28px rgba(6,43,95,.10)}
+.update-gallery img:first-child{grid-column:1/-1;height:330px}
+.update-badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:#eaf6ee;color:var(--green);font-weight:900;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px}
+.update-points{display:grid;gap:10px;margin:20px 0}
+.update-points div{background:#fff;border:1px solid var(--border);border-radius:15px;padding:13px 15px;font-weight:800;color:var(--blue)}
+.partner-card{margin-top:28px;background:#fff;border:1px solid var(--border);border-radius:24px;padding:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:190px 1fr;gap:24px;align-items:center}
+.partner-logo{background:#fff;border:1px solid var(--border);border-radius:18px;padding:12px;text-align:center}
+.partner-logo img{width:100%;max-height:90px;object-fit:contain}
+.partner-card h3{margin-bottom:8px;font-size:1.35rem}
+.partner-card .role{margin:0 0 8px}
+@media(max-width:920px){.update-grid{grid-template-columns:1fr}.partner-card{grid-template-columns:1fr;text-align:center}.partner-logo{max-width:240px;margin:auto}}
+@media(max-width:560px){.update-gallery{grid-template-columns:1fr}.update-gallery img,.update-gallery img:first-child{grid-column:auto;height:auto;max-height:430px}.partner-card{padding:20px}}
+
 </style>
 </head>
 
@@ -383,6 +401,7 @@ body.ro .ro { display: inline; }
       <a href="#model" data-en="Our model" data-ro="Modelul nostru">Our model</a>
       <a href="#founder" data-en="Founder" data-ro="Fondator">Founder</a>
       <a href="#crowdfunder">Crowdfunder</a>
+      <a href="#latest-update" data-en="Latest update" data-ro="Noutăți">Latest update</a>
       <a href="#impact" data-en="Impact" data-ro="Impact">Impact</a>
       <a href="#team" data-en="Our team" data-ro="Echipa">Our team</a>
       <a href="#volunteer" data-en="Volunteer" data-ro="Voluntariat">Volunteer</a>
@@ -626,6 +645,60 @@ body.ro .ro { display: inline; }
             data-ro="ReStart Mobility continuă să primească în Marea Britanie donații de echipamente de mobilitate și îngrijire. Cu mai multe echipamente și mai mult sprijin, putem ajuta mai multe persoane să recâștige confort, demnitate și independență.">
         ReStart Mobility continues to receive donated mobility and care equipment in the UK. With more equipment and more support, we can help more people regain comfort, dignity and independence.
       </span>
+    </div>
+  </div>
+</section>
+
+
+<section id="latest-update" class="latest-update">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="Our mission in motion" data-ro="Misiunea noastră în mișcare">Our mission in motion</h2>
+      <div class="line"></div>
+      <p data-en="A major mobility-equipment collection in London has brought wheelchairs, walking aids, commode chairs, cushions and other essential equipment into ReStart Mobility's reuse journey."
+         data-ro="O colectare importantă de echipamente de mobilitate din Londra a adus în circuitul ReStart Mobility scaune rulante, cadre de mers, scaune WC, perne și alte echipamente esențiale.">
+        A major mobility-equipment collection in London has brought wheelchairs, walking aids, commode chairs, cushions and other essential equipment into ReStart Mobility's reuse journey.
+      </p>
+    </div>
+
+    <div class="update-grid">
+      <div class="update-gallery">
+        <img src="restart-london-collection-1.jpg" alt="Van loaded with donated wheelchairs and mobility equipment collected for ReStart Mobility">
+        <img src="restart-london-collection-2.jpg" alt="Donated commode chairs, cushions and mobility equipment loaded for transport">
+        <img src="restart-london-collection-3.jpg" alt="Manual wheelchairs and walking aids collected for reuse by ReStart Mobility">
+        <img src="restart-london-collection-4.jpg" alt="Donated mobility equipment safely stored after collection">
+      </div>
+
+      <div>
+        <span class="update-badge" data-en="Latest collection · September 2026" data-ro="Cea mai recentă colectare · Septembrie 2026">Latest collection · September 2026</span>
+        <h3 style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:14px" data-en="From unused equipment to new opportunities" data-ro="De la echipamente nefolosite la noi oportunități">From unused equipment to new opportunities</h3>
+        <p data-en="This substantial donation was collected in London and transported to our storage facility near Ipswich. The equipment will be checked, prepared and matched with people who can benefit from it, helping valuable mobility aids stay in use instead of going to waste."
+           data-ro="Această donație importantă a fost colectată din Londra și transportată către spațiul nostru de depozitare din zona Ipswich. Echipamentele vor fi verificate, pregătite și alocate persoanelor care pot beneficia de ele, astfel încât ajutoare de mobilitate valoroase să rămână în folosință în loc să fie irosite.">
+          This substantial donation was collected in London and transported to our storage facility near Ipswich. The equipment will be checked, prepared and matched with people who can benefit from it, helping valuable mobility aids stay in use instead of going to waste.
+        </p>
+        <div class="update-points">
+          <div>♿ <span data-en="Manual wheelchairs and mobility aids" data-ro="Scaune rulante manuale și ajutoare de mobilitate">Manual wheelchairs and mobility aids</span></div>
+          <div>🦯 <span data-en="Rollators, walkers and Zimmer frames" data-ro="Rollatoare, cadre de mers și cadre Zimmer">Rollators, walkers and Zimmer frames</span></div>
+          <div>🪑 <span data-en="Commode chairs, cushions and care equipment" data-ro="Scaune WC, perne și echipamente de îngrijire">Commode chairs, cushions and care equipment</span></div>
+          <div>♻️ <span data-en="Prepared for responsible reuse" data-ro="Pregătite pentru reutilizare responsabilă">Prepared for responsible reuse</span></div>
+        </div>
+        <a class="btn btn-pink" href="https://www.crowdfunder.co.uk/p/restart-mobility-changing-lives-together" target="_blank" rel="noopener" data-en="Help fund our next collection" data-ro="Ajută la finanțarea următoarei colectări">Help fund our next collection</a>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo">
+        <img src="red-eagle-logistics-logo.jpg" alt="Red Eagle Logistics logo">
+      </div>
+      <div>
+        <div class="role" data-en="Logistics Support" data-ro="Sprijin logistic">Logistics Support</div>
+        <h3 data-en="With thanks to Red Eagle Logistics" data-ro="Mulțumiri Red Eagle Logistics">With thanks to Red Eagle Logistics</h3>
+        <p data-en="Reliable transport is a vital part of our work. We would like to thank the Red Eagle Logistics team for helping us coordinate and move this major collection safely from London to our Ipswich-area storage. Every successful collection brings donated equipment one step closer to a new home and a person who needs it."
+           data-ro="Transportul de încredere este o parte esențială a activității noastre. Mulțumim echipei Red Eagle Logistics pentru ajutorul oferit în coordonarea și transportarea în siguranță a acestei colectări importante din Londra către spațiul nostru de depozitare din zona Ipswich. Fiecare colectare reușită aduce echipamentele donate cu un pas mai aproape de o nouă casă și de o persoană care are nevoie de ele.">
+          Reliable transport is a vital part of our work. We would like to thank the Red Eagle Logistics team for helping us coordinate and move this major collection safely from London to our Ipswich-area storage. Every successful collection brings donated equipment one step closer to a new home and a person who needs it.
+        </p>
+        <a class="btn btn-white" href="https://redeaglelogisticltd.co.uk/" target="_blank" rel="noopener noreferrer" style="margin-top:14px" data-en="Visit Red Eagle Logistics" data-ro="Vizitează Red Eagle Logistics">Visit Red Eagle Logistics</a>
+      </div>
     </div>
   </div>
 </section>
