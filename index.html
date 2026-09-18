@@ -377,6 +377,23 @@ body.ro .ro { display: inline; }
 @media(max-width:920px){.update-grid{grid-template-columns:1fr}.partner-card{grid-template-columns:1fr;text-align:center}.partner-logo{max-width:240px;margin:auto}}
 @media(max-width:560px){.update-gallery{grid-template-columns:1fr}.update-gallery img,.update-gallery img:first-child{grid-column:auto;height:auto;max-height:430px}.partner-card{padding:20px}}
 
+/* DONOR STORIES */
+.donor-stories{background:linear-gradient(180deg,#f7fbff 0%,#fff 100%)}
+.donor-story{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px;align-items:stretch}
+.donor-copy{background:#fff;border:1px solid var(--border);border-radius:26px;padding:30px;box-shadow:var(--shadow)}
+.donor-kicker{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.donor-location{font-weight:800;margin:10px 0 18px}
+.donor-quote{margin:22px 0;padding:22px;border-radius:18px;background:#eef8ff;border-left:4px solid #3aa7e8;font-size:1.08rem;font-style:italic;line-height:1.6;color:var(--blue)}
+.donor-signoff{font-weight:800;color:var(--text)}
+.donor-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.donor-gallery figure{position:relative;overflow:hidden;border-radius:22px;border:1px solid var(--border);box-shadow:0 10px 28px rgba(6,43,95,.10);background:#eef3f7}
+.donor-gallery figure:first-child{grid-column:1/-1;height:360px}
+.donor-gallery figure:not(:first-child){height:260px}
+.donor-gallery img{width:100%;height:100%;object-fit:cover}
+.donor-gallery figcaption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(6,43,95,.92);color:#fff;padding:9px 12px;border-radius:12px;font-size:.85rem;font-weight:800}
+@media(max-width:920px){.donor-story{grid-template-columns:1fr}.donor-gallery figure:first-child{height:330px}}
+@media(max-width:560px){.donor-copy{padding:22px}.donor-gallery{grid-template-columns:1fr}.donor-gallery figure,.donor-gallery figure:first-child,.donor-gallery figure:not(:first-child){grid-column:auto;height:300px}}
+
 </style>
 </head>
 
@@ -405,6 +422,7 @@ body.ro .ro { display: inline; }
       <a href="#founder" data-en="Founder" data-ro="Fondator">Founder</a>
       <a href="#crowdfunder">Crowdfunder</a>
       <a href="#latest-update" data-en="Latest update" data-ro="Noutăți">Latest update</a>
+      <a href="#donor-stories" data-en="Donor stories" data-ro="Poveștile donatorilor">Donor stories</a>
       <a href="#impact" data-en="Impact" data-ro="Impact">Impact</a>
       <a href="#team" data-en="Our team" data-ro="Echipa">Our team</a>
       <a href="#volunteer" data-en="Volunteer" data-ro="Voluntariat">Volunteer</a>
@@ -701,6 +719,33 @@ body.ro .ro { display: inline; }
           Reliable transport is a vital part of our work. We would like to thank the Red Eagle Logistics team for helping us coordinate and move this major collection safely from London to our Ipswich-area storage. Every successful collection brings donated equipment one step closer to a new home and a person who needs it.
         </p>
         <a class="btn btn-white" href="https://redeaglelogisticltd.co.uk/" target="_blank" rel="noopener noreferrer" style="margin-top:14px" data-en="Visit Red Eagle Logistics" data-ro="Vizitează Red Eagle Logistics">Visit Red Eagle Logistics</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="donor-stories" class="donor-stories">
+  <div class="container">
+    <div class="section-title">
+      <div class="donor-kicker" data-en="Donor stories" data-ro="Poveștile donatorilor">Donor stories</div>
+      <h2 data-en="Thank you to our donors" data-ro="Mulțumim donatorilor noștri">Thank you to our donors</h2>
+      <div class="line"></div>
+      <p data-en="Every donation makes a real difference. Together we give valuable mobility and care equipment a second life." data-ro="Fiecare donație face o diferență reală. Împreună oferim echipamentelor valoroase de mobilitate și îngrijire o a doua viață.">Every donation makes a real difference. Together we give valuable mobility and care equipment a second life.</p>
+    </div>
+    <div class="donor-story">
+      <div class="donor-copy">
+        <div class="donor-kicker" data-en="Equipment donation" data-ro="Donație de echipament">Equipment donation</div>
+        <h3 style="font-size:2.2rem;margin-bottom:8px" data-en="Ceiling-track patient hoist" data-ro="Hoist de tavan pe șină">Ceiling-track patient hoist</h3>
+        <div class="donor-location">📍 East Finchley, London</div>
+        <p data-en="We are very grateful to Anthony from East Finchley for donating a ceiling-track patient hoist to ReStart Mobility. By choosing reuse, valuable equipment has been saved from disposal and can now be prepared for a new purpose." data-ro="Îi suntem foarte recunoscători lui Anthony din East Finchley pentru donația unui hoist de tavan pe șină către ReStart Mobility. Alegând reutilizarea, un echipament valoros a fost salvat de la eliminare și poate fi pregătit pentru un nou scop.">We are very grateful to Anthony from East Finchley for donating a ceiling-track patient hoist to ReStart Mobility. By choosing reuse, valuable equipment has been saved from disposal and can now be prepared for a new purpose.</p>
+        <blockquote class="donor-quote">“I'm delighted it'll go to a good home. It was just in the house when we moved in and I'm very grateful to you for giving it a purpose and saving it from the tip.”<br><strong>— Anthony from East Finchley</strong></blockquote>
+        <p class="donor-signoff">“Thank you so much again, you're doing great work and I hope all your efforts make someone's life that little bit better.” — Anthony</p>
+      </div>
+      <div class="donor-gallery">
+        <figure><img src="anthony-hoist-installed.jpg" alt="Ceiling-track patient hoist installed in an East Finchley home before donation to ReStart Mobility"><figcaption>Ceiling hoist before collection · East Finchley, London</figcaption></figure>
+        <figure><img src="anthony-hoist-donated.jpg" alt="Donated ceiling hoist unit and rail collected by ReStart Mobility"><figcaption>The donated hoist unit and rail</figcaption></figure>
+        <figure><img src="anthony-hoist-detail.jpg" alt="Close-up detail of the donated ceiling hoist"><figcaption>Detail of the donated hoist</figcaption></figure>
       </div>
     </div>
   </div>
