@@ -65,6 +65,22 @@
 }
 </script>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Where can I donate a mobility scooter in the UK?","acceptedAnswer":{"@type":"Answer","text":"ReStart Mobility CIC accepts offers of mobility scooters and other mobility equipment in the UK. Collection may be possible depending on the item's location, size and our current transport availability."}},
+    {"@type":"Question","name":"Can I donate an electric or manual wheelchair?","acceptedAnswer":{"@type":"Answer","text":"Yes. ReStart Mobility CIC welcomes offers of electric wheelchairs, powerchairs and manual wheelchairs. Please tell us the location, condition and whether chargers or accessories are included."}},
+    {"@type":"Question","name":"Do you collect donated mobility equipment?","acceptedAnswer":{"@type":"Answer","text":"We can arrange collection in many cases, depending on location, equipment type and transport availability. Contact us with the postcode and basic details so we can confirm what is possible."}},
+    {"@type":"Question","name":"What mobility and care equipment can I donate?","acceptedAnswer":{"@type":"Answer","text":"We welcome offers including mobility scooters, electric and manual wheelchairs, patient hoists, medical beds, rollators, walking frames, commode chairs, ramps and other useful mobility or care equipment."}},
+    {"@type":"Question","name":"Does donated equipment need to be in perfect condition?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Tell us honestly about the condition, battery, charger, known faults or missing parts. We assess whether equipment can be safely checked, prepared, repaired or reused."}},
+    {"@type":"Question","name":"What happens to equipment donated to ReStart Mobility?","acceptedAnswer":{"@type":"Answer","text":"Equipment is assessed and, where suitable, cleaned, checked and prepared for responsible reuse. ReStart Mobility CIC supports people who need mobility equipment in the UK and Romania and operates a social-enterprise model in which surplus is reinvested in its mission."}}
+  ]
+}
+</script>
+
 <style>
 :root{
   --blue:#062b5f;
@@ -393,6 +409,18 @@ body.ro .ro { display: inline; }
 .donor-gallery figcaption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(6,43,95,.92);color:#fff;padding:9px 12px;border-radius:12px;font-size:.85rem;font-weight:800}
 @media(max-width:920px){.donor-story{grid-template-columns:1fr}.donor-gallery figure:first-child{height:330px}}
 @media(max-width:560px){.donor-copy{padding:22px}.donor-gallery{grid-template-columns:1fr}.donor-gallery figure,.donor-gallery figure:first-child,.donor-gallery figure:not(:first-child){grid-column:auto;height:300px}}
+
+
+/* DONATION FAQ */
+.donation-faq{background:#f7fbff}
+.faq-grid{max-width:900px;margin:0 auto;display:grid;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:18px;padding:0 22px;box-shadow:0 8px 24px rgba(6,43,95,.06)}
+.faq-item summary{cursor:pointer;list-style:none;font-weight:900;font-size:1.05rem;padding:20px 34px 20px 0;position:relative;color:var(--blue)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:'+';position:absolute;right:0;top:16px;font-size:1.55rem;color:var(--green)}
+.faq-item[open] summary:after{content:'–'}
+.faq-item p{padding:0 0 20px}
+.faq-cta{text-align:center;margin-top:26px}
 
 </style>
 </head>
@@ -851,6 +879,28 @@ body.ro .ro { display: inline; }
     </div>
     <div class="volunteer-photo">
       <img src="gabriela-volunteer.jpg" alt="Gabriela, ReStart Mobility volunteer">
+    </div>
+  </div>
+</section>
+
+
+<section id="donation-faq" class="donation-faq">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-en="Mobility equipment donation — frequently asked questions" data-ro="Donații de echipamente de mobilitate — întrebări frecvente">Mobility equipment donation — frequently asked questions</h2>
+      <div class="line"></div>
+      <p data-en="Looking for somewhere to donate a wheelchair, mobility scooter, hoist or other mobility equipment in the UK? Here are answers to the questions donors ask us most often." data-ro="Cauți unde să donezi în UK un scaun rulant, un scuter de mobilitate, un hoist sau alte echipamente? Iată răspunsurile la cele mai frecvente întrebări.">Looking for somewhere to donate a wheelchair, mobility scooter, hoist or other mobility equipment in the UK? Here are answers to the questions donors ask us most often.</p>
+    </div>
+    <div class="faq-grid">
+      <details class="faq-item"><summary>Where can I donate a mobility scooter in the UK?</summary><p>ReStart Mobility CIC welcomes offers of mobility scooters and other mobility equipment. Collection may be possible depending on the item's location, size and our current transport availability. Send us your postcode, a photo and any details you have about the scooter.</p></details>
+      <details class="faq-item"><summary>Can I donate an electric or manual wheelchair?</summary><p>Yes. We welcome electric wheelchairs, powerchairs and manual wheelchairs. If it is powered, please tell us whether the battery and charger are included and whether there are any known problems.</p></details>
+      <details class="faq-item"><summary>Do you collect donated mobility equipment?</summary><p>We can arrange collection in many cases, depending on location, equipment type and transport availability. Contact us with the collection postcode and basic details and we will let you know what we can arrange.</p></details>
+      <details class="faq-item"><summary>What mobility and care equipment can I donate?</summary><p>We welcome offers including mobility scooters, electric and manual wheelchairs, patient hoists, medical beds, rollators, walking frames, commode chairs, ramps and other useful mobility or care equipment.</p></details>
+      <details class="faq-item"><summary>Does the equipment need to be in perfect condition?</summary><p>Not necessarily. Please tell us honestly about its condition, battery, charger, known faults or missing parts. We can then assess whether it can be safely checked, prepared, repaired or reused.</p></details>
+      <details class="faq-item"><summary>What happens to equipment donated to ReStart Mobility?</summary><p>Suitable equipment is assessed, cleaned, checked and prepared for responsible reuse. Our aim is to keep valuable equipment in use and support people who need mobility equipment in the UK and Romania.</p></details>
+    </div>
+    <div class="faq-cta">
+      <a class="btn btn-green" href="donate-mobility-equipment.html">♿ Offer mobility equipment</a>
     </div>
   </div>
 </section>
